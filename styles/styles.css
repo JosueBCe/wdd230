@@ -26,12 +26,18 @@ header {
     border: solid 0.5px rgb(50, 50, 50);;
     
 }
-
+.assing_portal {
+    display: flex;
+    margin-left: 1.5rem;
+}
 main h2 {
     margin: 0;
     text-shadow: 1px 1px 2px #000000;
     color: rgb(50, 50, 50);
+
 }
+
+
 
 .list {
     display: block;
