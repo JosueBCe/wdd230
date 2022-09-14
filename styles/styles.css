@@ -24,8 +24,8 @@ header {
 .me_image img {
     width: 55%;
     border: solid 0.5px rgb(50, 50, 50);;
-    
 }
+
 .assing_portal {
     display: flex;
     margin-left: 1.5rem;
