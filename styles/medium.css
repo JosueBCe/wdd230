@@ -1,0 +1,14 @@
+@media only screen and (min-width : 32.5em) {
+
+    body  {
+        grid-template-rows: 2fr 3.2fr 1fr ;
+    }
+    header h1 {
+        font-size: 2em;
+    }
+    .list li {
+        padding: 1.15% 0rem;
+    }
+    
+}
+
