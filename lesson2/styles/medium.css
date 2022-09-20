@@ -9,9 +9,9 @@
     main {
         display:grid;
         grid-template-columns: 1fr 1fr ;
-        grid-template-rows: 0.7fr 1fr;
+        grid-template-rows: 0.7fr 0.8fr;
         justify-items: center;
-        padding: 0rem 5%;
+        padding: 0rem 6%;
     }
 /* 
     .mobile_view img {

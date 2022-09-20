@@ -2,7 +2,7 @@
 @media screen and (min-width: 64em){
     main {
         display: inline-flex;
-        margin: 1rem auto;
+        margin: 0rem auto;
         padding: 1rem auto;
         padding: 0rem;
         column-gap: 0.5rem;
@@ -14,5 +14,6 @@
         margin: 1rem 0.5rem 1rem 0.5rem;
         min-width: 320px;
         max-width: 350px;
+        max-height: 900px;
     }    
 }
