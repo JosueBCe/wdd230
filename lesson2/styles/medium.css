@@ -13,11 +13,11 @@
         justify-items: center;
         padding: 0rem 6%;
     }
-/* 
-    .mobile_view img {
-        max-height: 801px;
-    } */
 
+    .mobile_view {
+        margin-bottom: 0rem;
+
+    }
     main section:last-child {
         grid-column: 1/3;
         width: 100%;
@@ -26,6 +26,10 @@
         max-width: 500px;
         max-height: none;
         
+    }
+
+    footer p {
+        padding-bottom: 1rem
     }
 
 
