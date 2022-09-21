@@ -1,18 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+:root {
+    --border-radius: 1rem 1rem 0rem 0rem;
+    --margin : 1rem 0.5rem 1rem 0.5rem;
+    --border: solid 0.1px gray;
+}
 
 body {
     display: grid;
     grid-template-rows: 0.2fr 6fr 0.1fr;
     grid-template-columns: 1fr;
     text-align: center;
-    font-family: "Lato", "sans";
+    font-family: "Roboto Mono", "sans";
     margin: 0rem auto;
 }
 
 main {
     display: block;
-    margin: 1rem 0.5rem 1rem 0.5rem;
+    margin: var(--margin);
     display: block;
     margin: 0rem auto;
 
@@ -31,17 +35,20 @@ header h2 {
 
 section {
     margin-top: 1rem;
-    margin: 1rem 0.5rem 1rem 0.5rem;
-    border-radius: 1rem 1rem 0rem 0rem;
+    margin: var(--margin);
+    border-radius: var(--border-radius);
     max-width: 350px;
 }
 
+a {
+    text-decoration: none;
+}
 .principle {
     background-color: rgba(0, 28, 130, 0.807);
     display: flex;
     color: white;
     padding-left: 0.5rem;
-    border-radius: 1rem 1rem 0rem 0rem;
+    border-radius: var(--border-radius);
 }
 
 .principle h3 {
@@ -62,7 +69,7 @@ section {
 .mobile_view {
     background-color: rgb(243, 242, 242);
     padding: 1rem 0rem;
-    border: solid 0.1px gray;
+    border: var(--border);
    /*  margin-bottom: 5rem; */
 
 }
@@ -71,17 +78,18 @@ section {
 .mobile_view img {
     width: 95%;
     max-height: 989px;
-    border: solid 0.1px gray;
+    border: var(--border)
 }
 
 .mobile_view p {
     text-align: left;
-    margin-left: 0.7rem;
+    margin-left: 0.5rem;
     margin-bottom: 0rem;
 }
 
 ul {
     text-align: left;
+    padding-left: 2rem;
 }
 
 

@@ -10,7 +10,7 @@
     }
     main section:last-child {
         width: 60%;
-        margin: 1rem 0.5rem 1rem 0.5rem;
+        margin: var(--margin);
         max-width: 350px;
         max-height: 900px;
     }
