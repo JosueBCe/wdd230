@@ -1,19 +1,21 @@
-
-@media screen and (min-width: 64em){
+@media screen and (min-width: 60em) {
     main {
         display: inline-flex;
         margin: 0rem auto;
         padding: 1rem;
         padding: 0rem;
-        column-gap: 0.5rem;
-
+    }
+    section {
+        width: 70%;
     }
     main section:last-child {
-        grid-column: 1/3;
-        width: 100%;
+        width: 60%;
         margin: 1rem 0.5rem 1rem 0.5rem;
-        min-width: 320px;
         max-width: 350px;
         max-height: 900px;
-    }    
+    }
+    .mobile_view img {
+        width: 95%; 
+        min-width: 240px;
+    }
 }
