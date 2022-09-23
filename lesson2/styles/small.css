@@ -56,18 +56,18 @@ a {
     margin: 0.5rem 0rem;
 }
 
-.company_name {
+.company-name {
     display: block;
     float: left;
     padding-left: 0.5rem;
     
 }
 
-.company_name p {
+.company-name p {
     text-align: left;
 }
 
-.mobile_view {
+.mobile-view {
     background-color: rgb(243, 242, 242);
     padding: 1rem 0rem;
     border: var(--border);
@@ -76,13 +76,13 @@ a {
 }
 
 
-.mobile_view img {
+.mobile-view img {
     width: 95%;
     max-height: 989px;
     border: var(--border)
 }
 
-.mobile_view p {
+.mobile-view p {
     text-align: left;
     margin-left: 0.5rem;
     margin-bottom: 0rem;
