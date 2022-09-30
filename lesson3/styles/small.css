@@ -121,12 +121,13 @@ footer {
     display: grid;
     text-align: left;
     margin: 1rem auto;
-    padding: 0;
+    padding: 0 2em;
     font-size:14px;
 }
 
 table {
-    border:solid 1px var(--backgr-main)
+    border:solid 1px var(--backgr-main);
+
 }
 
 
