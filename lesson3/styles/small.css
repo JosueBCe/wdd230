@@ -1,4 +1,4 @@
-/* https://coolors.co/palette/e63946-f1faee-a8dadc-457b9d-1d3557 */
+/* https://coolors.co/palette/e63946-f1faee-51BABD-457b9d-1d3557*/
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 
 :root {
@@ -166,6 +166,12 @@ table tr:nth-child(7) td:nth-child(4) {
 }
 td {
     border: solid 0.5px var(--backgr-subheadings)
+}
+
+.color-sch-main img {
+    width: 100%;
+    margin: 1em auto;
+    align-self: center;
 }
 
 
