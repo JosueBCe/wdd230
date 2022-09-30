@@ -14,7 +14,7 @@
 
 body {
     display: grid;
-    grid-template-columns: 1;
+    grid-template-columns: 1fr;
     margin: 0px auto;
     font-family: "Roboto Mono", "sans";
 }
