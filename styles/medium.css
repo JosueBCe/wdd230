@@ -2,9 +2,28 @@
 
     body  {
         grid-template-rows: 2fr 3.2fr 1fr ;
+        align-self: center;
+    }
+    header {
+        max-width: 1000px;
+        width: 100%;
+        margin: 0em auto;
+    }
+    main {
+        max-width: 1000px;
+        width: 100%;
+        margin: 0em auto;
+    }
+    footer {
+        max-width: 1000px;
+        width: 100%;
+        margin: 0em auto;
     }
     header h1 {
         font-size: 2em;
+    }
+    main h2 {
+        margin-top: .7em;
     }
     .list li {
         padding: 1.15% 0rem;
