@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto+Mono:wght@300;400&display=swap');
+
 :root {
     --border-radius: 1rem 1rem 0rem 0rem;
     --margin : 1rem 0.5rem 1rem 0.5rem;
@@ -10,7 +11,7 @@ body {
     grid-template-rows: 0.2fr 6fr 0.1fr;
     grid-template-columns: 1fr;
     text-align: center;
-    font-family: "Roboto Mono", "sans";
+    font-family: "Roboto Mono", "Open Sans","sans";
     margin: 0rem auto;
     font-size: 14px;
 }
