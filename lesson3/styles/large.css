@@ -1,6 +1,7 @@
 @media screen and (min-width: 64em){
     header {
         min-width: 1000px;
+        
         margin: 0em auto;
         padding: 0em auto;
     }
@@ -22,4 +23,12 @@
         width: 100%;
         margin: 0em auto;
     } 
+
+    .color-sch-main {
+        max-width: 1000px;
+        width: 100%;
+        margin: 0em auto;
+        justify-content: center;
+        padding: 0em ;
+    }
 }
