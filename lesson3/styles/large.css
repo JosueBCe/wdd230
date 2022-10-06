@@ -1,0 +1,22 @@
+@media screen and (min-width: 64em){
+    header {
+        max-width: 1000px;
+        margin: 0em auto;
+        padding: 0em;
+    }
+    main {
+        max-width: 1000px;
+        width: 100%;
+        margin: 0em auto;
+    }
+    nav {
+        max-width: 1000px;
+        width: 100%;
+        margin: 0em auto;
+    }
+    footer {
+        max-width: 1000px;
+        width: 100%;
+        margin: 0em auto;
+    } 
+}
