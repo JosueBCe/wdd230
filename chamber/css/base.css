@@ -67,16 +67,19 @@ header {
 }
 
 nav {
-    display: flex;
+    display: block;
     background-color: white;
-    font-size: 0.5em;
-    background-color: var(--backgr-main);
-    justify-content: flex-end;
+    font-size: .8em;
+    background-color: var(--constrast-backgr-subh);
+    justify-content: center;
     align-items: center;
 }
+.btn {
+    display: flex;
+    justify-content: center;
+}
 
-nav button {
-    margin: .4em;
+header button {
     background: transparent;
     border: none;
     font-size: 1.5rem;
@@ -128,7 +131,7 @@ main {
 section {
     background-color: var(--backgr-subheadings);
     border: solid 1px gray;
-    margin: 0.3em;
+    margin: .3em .6em;
     padding-left: 1em;
     color: white;
  
