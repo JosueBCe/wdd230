@@ -9,6 +9,28 @@
         grid-template-columns: repeat(4, 1fr);
     }
 
+    nav {
+        grid-row: 1;
+        grid-column: 2/3;
+        background-color: var(--backgr-main);
+        color: white;
+        border: none;
+        align-self: center;
+        font-size: .9em;
+    }
+    
+    nav ul {
+        display: flex;
+    }
+    nav ul.open {
+        display:flex;
+        background-color: var(--backgr-main);
+        align-self: center;
+        
+    }
+    header button {
+        display:none;
+    }
     .name h1 {
         font-size: 16px;
     }

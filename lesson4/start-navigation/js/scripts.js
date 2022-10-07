@@ -6,7 +6,3 @@ toggleMenu = () => {
 const button = document.getElementById("hamburgerBtn")
 
 button.onclick = () => toggleMenu()
-
-
-window.onresize = () => {if (window.innerWidth > 512) 
-    mainnav.classList.toggle('responsive')}; 
