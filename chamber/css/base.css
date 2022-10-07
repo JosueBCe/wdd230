@@ -121,7 +121,8 @@ nav ul.open{display: block;}
 main {
     display: grid;
     grid-template-rows: repeat(4, 1fr) 2fr ;
-    margin-top: 1em;
+    margin-top: 2em;
+    grid-gap: .5em;
 }
 
 section {
@@ -160,6 +161,8 @@ footer {
     background-color: var(--distintive-color);
     color: white;
     font-size: .8em;
+    margin-top: 1.5em;
+ 
 }
 
 
@@ -173,3 +176,18 @@ footer img {
     align-content: center;
     padding: 0 4.5em;
 }
+
+
+/* 
+"""   
+
+body max-width 1200px
+
+@media screen and (min-width: 64em)
+main {
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 0.5em;
+    margin: 2em 0.5em
+}
+    """ */
