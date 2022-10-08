@@ -16,7 +16,7 @@
     }
 
     nav {
-        grid-row: 1;
+        grid-row: 1;    
         grid-column: 2/3;
         background-color: var(--backgr-main);
         color: white;
@@ -24,7 +24,13 @@
         align-self: center;
         font-size: 1em;
     }
-    
+    nav ul li a {
+        color: white;
+    }
+    nav ul li.active a {
+  
+        background:var(--backgr-subheadings)
+    }
     nav ul {
         display: flex;
     }
