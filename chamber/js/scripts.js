@@ -14,3 +14,6 @@ document.querySelector("#year").innerHTML = d.getFullYear();
 
 const date = new Object (document.lastModified);
 document.getElementById("updated").innerHTML =` Last Modification: ${date}`;
+
+/* window.onresize = () => {if (window.innerWidth > 1024) 
+    mainnav.classList.toggle('responsive')};  */
