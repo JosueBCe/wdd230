@@ -132,7 +132,6 @@ nav ul.open{
 
 main {
     display: grid;
-    grid-template-rows: repeat(4, 1fr) 2fr ;
     margin-top: 2em;
     grid-gap: .5em;
 }
@@ -173,7 +172,21 @@ section {
     border: solid 1px gray;
     margin: .3em .6em;
     color: white;
- 
+    text-align: center;
+    align-items: center;
+}
+
+p {
+    font-size:13px;
+}
+
+section img {
+    width: 30%;
+}
+.weather {
+    display:flex;
+    justify-content: space-around;
+    font-size: 20px;
 }
 
 section:nth-child(5) {
