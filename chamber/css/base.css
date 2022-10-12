@@ -73,7 +73,6 @@ nav {
     background-color: var(--constrast-backgr-subh);
     justify-content: center;
     align-items: center;
-    border: solid 0.1px gray;
     grid-row: 2/3;
     grid-column: 1/5;
 }
