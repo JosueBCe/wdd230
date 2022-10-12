@@ -240,6 +240,21 @@ section:nth-child(6) {
     padding: 0em .5em;
 }
 
+
+.spotlight:hover {
+    background: var(--backgr-subheadings);
+    border: solid 1px var(--backgr-main);
+
+    color: var(--backgr-main);
+}
+
+
+.spotlight:hover img {
+    border: solid 1px var(--backgr-main);
+}
+ 
+
+
 .spotlight:nth-child(2) {
     font-size: 0.9em;
 }
