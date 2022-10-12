@@ -112,6 +112,49 @@ h4 {
     color: white;
     padding: 0.5em 1em;
 }
+
+.personas {
+    padding:1em;
+    border: solid 1.8px var(--backgr-subheadings);
+    justify-self: center;
+    margin: 0em auto;
+    max-width: 700px;
+    border-radius: .2em;
+}
+
+hr {
+    font-size: 3em;
+}
+
+.personas h5 {
+    font-size: 1.2em;
+    color: var(--backgr-subheadings);
+}
+
+.personas img {
+    text-align: center;
+    max-width: 120px;
+    max-height: 180px;
+    border-radius: .3em;
+}
+
+.description {
+    border: solid 2px var(--backgr-main);
+    color: var(--backgr-main);
+    padding: .5em;
+    border-radius: .3em;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0.5em;
+}
+
+li {
+    padding: .25em;
+
+}
+
 footer {
     display:flex;
     justify-content: center;
