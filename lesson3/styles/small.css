@@ -129,6 +129,7 @@ hr {
 .personas h5 {
     font-size: 1.2em;
     color: var(--backgr-subheadings);
+    margin-left: .7em;
 }
 
 .personas img {
@@ -136,6 +137,7 @@ hr {
     max-width: 120px;
     max-height: 180px;
     border-radius: .3em;
+    margin-left: .7em;
 }
 
 .description {
