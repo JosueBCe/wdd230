@@ -5,6 +5,10 @@ const button = document.querySelector('button');
 
 
 button.addEventListener('click', () => {
+    
+    if (input.value.length === 0) {
+        alert('Please select a Chapter as favorite')
+    } else {
     const myFavChapt = input.value;
     input.value = '';
 
@@ -15,33 +19,15 @@ button.addEventListener('click', () => {
     listChapt.appendChild(listText);
     listText.textContent = myFavChapt;
     listChapt.appendChild(listBtn);
-    listBtn.textContent = `❌ Remove " ${myFavChapt} " `;
+    listBtn.textContent = `❌ Remove "${myFavChapt}" `;
     list.appendChild(listChapt);
 
     listBtn.addEventListener('click', () => {
         list.removeChild(listChapt);
     });
-
+    }
     input.focus();
 });
+let el = document.querySelector('button');
+el.ariaLabel = "Delete button";
 
-
-/* button.addEventListener("click", () => {
-    const myItem = input.value;
-
-    input.value = '';
-    console.log(myItem)
-   list.innerHTML += `
-    <li>${myItem}
-    <span>
-        <button class="deleteBtn" type="submit">&#10060;</button>
-    </span>
-    </li>
-    `
-    const btn = document.document.querySelector('button');
-    btn.addEventListener("click", () => {
-       
-    }
-    )
-})
- */
