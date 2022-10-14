@@ -59,10 +59,8 @@ header {
 }
 
 .name img {
-    width: 35%;
-    max-height: 67px;
-    max-width: 67px;
-    margin: 1em;
+    width: 55%;
+    margin: .2em;
     border-radius: .6em;
 }
 
@@ -79,7 +77,7 @@ header {
 }
 
 .icons img {
-    width: 100%;
+    width: 80%;
     padding: .3em;
     max-width: 32px;
     max-height: 32px;
@@ -304,8 +302,10 @@ footer {
 
 
 footer img {
-    width: 15%;
-    margin: 1em;
+    width: 35%;
+    max-width: 95px;
+    max-height: 95px;
+    margin-top: .2em
 }
 
 .footer-sub {

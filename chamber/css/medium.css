@@ -4,6 +4,13 @@
         font-size: 1em;
     }
 
+    
+    .name img {
+       width: 30%;
+       max-width: 85px;
+       max-height: 85px;
+    }
+
     main {
 /*         grid-template-rows: repeat(5, 1fr); */
         grid-template-columns: repeat(3, 1fr);
@@ -81,7 +88,9 @@
         grid-template-rows: 1fr 0.1fr;
         font-size: 0.8em;
     }
-   
+    
+ 
+
     .footer-main {
         display: grid;
         grid-template-columns: 0.5fr 0.7fr;
@@ -105,8 +114,10 @@
     }
 
     .footer-image img {
-        width: 40%;
-        margin: 1em;
+        width: 65%;
+        max-width: 90px;
+        max-height: 90px;
+        margin: .1em;
 
     }
 
