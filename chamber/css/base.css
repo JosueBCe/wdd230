@@ -15,18 +15,34 @@ body {
     margin: 0px auto;
     font-family: "Roboto Mono", "sans";
     padding: 0;
+    
 }
 
 header {
     display: grid;
     grid-template-columns: 1fr 1fr 0.7fr;
     background: var(--backgr-main);
+    position: relative;
 }
+
+#myDIV {
+    position: absolute;
+    background-color: var(--constrast-backgr-main);
+    color: var(--backgr-main);
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    width: -webkit-fill-available;
+       
+}
+
+#myDIV p{font-size: 1em; }
 
 .name {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+   
 }
 
 .name img {
