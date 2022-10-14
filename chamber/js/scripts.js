@@ -20,7 +20,7 @@ document.getElementById("updated").innerHTML =` Last Modification: ${date}`;
 
 
 let dates = new Date()
-let day = 1/* dates.getDay() */
+let day = dates.getDay()
 
 function display () {
 if (day != 1 && day != 2) {
