@@ -6,6 +6,10 @@
     --distintive-color: #E63946;
 }
 
+::placeholder {
+  color: var(--backgr-subheadings);
+  opacity: 1; 
+}
 
 body {
     display: grid;
@@ -259,6 +263,28 @@ section:nth-child(5) {
 
 section:nth-child(6) {
     display: none;
+}
+
+.weather {
+    display: inline-block;
+}
+
+input {
+    margin: .5em auto;
+    border-radius: .5em;
+    background-color: var(--constrast-backgr-main);
+    width: 80%;
+    text-align: center;
+    color: white;
+    padding: .25em;
+
+}
+#windChillBtn {
+    border-radius: .3em;
+    background-color: var(--backgr-subheadings);
+    border: none;
+    color: white;
+    padding: .5em;
 }
 
 .spotlight {
