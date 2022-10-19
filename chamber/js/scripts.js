@@ -9,7 +9,13 @@ button.onclick = () => toggleMenu()
 
 
 const d = new Date()
+
+const dayAndNum = {weekday:"long", day:"numeric"}
+
+document.querySelector("#today-date").innerHTML = d.toLocaleDateString('en-uk', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+
 document.querySelector("#year").innerHTML = d.getFullYear();
+
 
 
 const date = new Object (document.lastModified);

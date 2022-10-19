@@ -18,7 +18,7 @@ document.querySelector("#windChillBtn").addEventListener("click", () => {
     let inputTemp = document.getElementById("myTemp").value
     let inputWind = document.getElementById("myWind").value
 
-    document.getElementById("output").innerHTML += tempConversor(inputTemp, inputWind)
+    document.getElementById("output").innerHTML += `Wind Chill: ${tempConversor(inputTemp, inputWind)}` 
 })
 
 /* onclick="tempConversor()" */

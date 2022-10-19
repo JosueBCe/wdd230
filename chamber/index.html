@@ -46,14 +46,13 @@
         </div>
         <div class="btn"> <button id="hamburgerBtn"><span>&#9776;</span><span>x</span></button></div>
         <div class="current-date">
-            <p>Monday 22, November 2022</p>
+            <p id="today-date">Monday 22, November 2022</p>
         </div>
         <div id="myDIV">
             <p>🤝🏼 Come join us for the chamber meet and greet Wednesday at 7:00 p.m.</p>
             <i onclick="myFunction()">❌</i>
         </div>
     </header>
-    </div>
     <main>
         <section class="hero-section">
             <div class="welcome-message">
@@ -79,15 +78,15 @@
             <h2>Weather</h2>
             <div class="weather">
                 <img src="/wdd230/chamber/images/weather_icon.png" alt="">
-                <h4>Temperature in °F:<input type="text" id="myTemp"  placeholder="Type the Temperature"></h3>
+                <h3>Temperature in °F:
+                    <input type="text" id="myTemp"  placeholder="Type the Temperature"></h3>
                 <p id="windSpeed">Wind Speed in mph:<input type="text" id="myWind" placeholder="Type the Wind Speed"></p>
             <button type="button" id="windChillBtn">Get Wind Chill</button>
             </div>
             
             <hr>
-            <h5>CLEAR SKY</h4>
-           
-            <span> Wind Chill:<p id="output"></p></span>
+            <h4>CLEAR SKY</h4>
+           <h5 id="output">Wind Chill:</h5>
         </section>
         <section>
             <h2>New Release</h2>
