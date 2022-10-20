@@ -29,7 +29,6 @@ header {
 }
 
 #myDIV {
-    /*     position: absolute; */
     background-color: var(--constrast-backgr-main);
     color: var(--backgr-main);
     z-index: 1;
@@ -55,7 +54,6 @@ header {
     height: 20px;
     align-self: center;
     margin-right: .5em;
-    
     
 }
 
@@ -261,9 +259,7 @@ section:nth-child(1) img {
     max-height: none;
 }
 
-/* section:nth-child(3) {
-    background-color: var(--constrast-backgr-main);
-} */
+
 
 section:nth-child(5) {
     grid-row: 5/7;
@@ -298,26 +294,11 @@ input {
 
 .spotlight {
     background: var(--backgr-subheadings);
-
     border: solid 1px var(--backgr-main);
     margin: 0.5em 0.7em;
     padding: 0em .5em;
 }
 
-
-/* .spotlight:hover {
-    background: var(--backgr-subheadings);
-    border: solid 1px var(--backgr-main);
-
-    color: var(--backgr-main);
-}
- */
-
-
-.spotlight:hover img {
-    border: solid 1px var(--backgr-main);
-}
- 
 
 
 .spotlight:nth-child(2) {
@@ -352,17 +333,3 @@ footer img {
     padding: 0 4.5em;
 }
 
-
-/* 
-"""   
-
-body max-width 1200px
-
-@media screen and (min-width: 64em)
-main {
-    grid-template-rows: repeat(3, 1fr);
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 0.5em;
-    margin: 2em 0.5em
-}
-    """ */

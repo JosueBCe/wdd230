@@ -21,21 +21,3 @@ document.querySelector("#windChillBtn").addEventListener("click", () => {
     document.getElementById("output").innerHTML += `Wind Chill: ${tempConversor(inputTemp, inputWind)}` 
 })
 
-/* onclick="tempConversor()" */
-
-
-
-
-
-/* Formula to Calculate chill factor */
-
-
-// f() = 35.74  + 0.6212t - 35.75 s^(0.16) + 0.4275 t s^(0.16)
-
-// t is the air average temperature in Fahrenheit
-// s is the wind speed in miles per hour.
-
-// temperatures at or below 10 °C (50 °F)
-
-// wind speeds above 4.8 kilometers per hour (3.0 mph).
-

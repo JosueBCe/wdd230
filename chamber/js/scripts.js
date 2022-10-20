@@ -10,7 +10,6 @@ button.onclick = () => toggleMenu()
 
 const d = new Date()
 
-const dayAndNum = {weekday:"long", day:"numeric"}
 
 document.querySelector("#today-date").innerHTML = d.toLocaleDateString('en-uk', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
 
@@ -21,12 +20,9 @@ document.querySelector("#year").innerHTML = d.getFullYear();
 const date = new Object (document.lastModified);
 document.getElementById("updated").innerHTML =` Last Modification: ${date}`;
 
-/* window.onresize = () => {if (window.innerWidth > 1024) 
-    mainnav.classList.toggle('responsive')};  */
 
 
-let dates = new Date()
-let day = 2/* dates.getDay() */
+let day = d.getDay() 
 
 function display () {
 if (day != 1 && day != 2) {
@@ -39,7 +35,3 @@ display()
 function myFunction() {
     document.getElementById("myDIV").style.display = "none";
 }
-/* 
-function showHTML(){
-    alert("<img src=\"https://myweb.com/images/banners/1.gif\" border=0>");
-} */
