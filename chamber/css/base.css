@@ -232,6 +232,12 @@ p {
     font-size: 13px;
 }
 
+.spotlight a{
+    text-decoration: none;
+    color: var(--constrast-backgr-subh);
+    box-shadow: 0px 4px 4px var(--constrast-backgr-main);
+    padding: .3em;
+}
 
 section img {
     width: 100%;
@@ -275,7 +281,7 @@ section:nth-child(6) {
 input {
     margin: .5em auto;
     border-radius: .5em;
-    background-color: var(--constrast-backgr-main);
+    background-color: var(--backgr-subheadings);
     width: 80%;
     text-align: center;
     color: white;
@@ -291,7 +297,7 @@ input {
 }
 
 .spotlight {
-    background: var(--constrast-backgr-main);
+    background: var(--backgr-subheadings);
 
     border: solid 1px var(--backgr-main);
     margin: 0.5em 0.7em;
@@ -299,12 +305,13 @@ input {
 }
 
 
-.spotlight:hover {
+/* .spotlight:hover {
     background: var(--backgr-subheadings);
     border: solid 1px var(--backgr-main);
 
     color: var(--backgr-main);
 }
+ */
 
 
 .spotlight:hover img {
