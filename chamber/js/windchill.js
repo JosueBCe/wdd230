@@ -12,14 +12,7 @@ const tempConversor = (temp, windSpeed) => {
     }
 }
 
-
-
-
-
 let inputTemp = Number(document.getElementById("myTemp").innerHTML)
 let inputWind = Number(document.getElementById("myWind").innerHTML)
 
 document.getElementById("output").innerHTML += `${tempConversor(inputTemp, inputWind)} ºF`
-
-/* document.querySelector("#windChillBtn").addEventListener("click", () => { 
-}) */
