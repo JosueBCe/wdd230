@@ -78,15 +78,12 @@
             <h2>Weather</h2>
             <div class="weather">
                 <img src="/wdd230/chamber/images/weather_icon.png" alt="Weather Icon Image">
-                <h3>Temperature in °F:
-                    <input type="text" id="myTemp"  placeholder="Type the Temperature"></h3>
-                <p id="windSpeed">Wind Speed in mph:<input type="text" id="myWind" placeholder="Type the Wind Speed"></p>
-            <button type="button" id="windChillBtn">Get Wind Chill</button>
+                <div class="temp"><span id="myTemp">40</span>ºF</div>
             </div>
-            
-            <hr>
             <h4>CLEAR SKY</h4>
-           <h5 id="output">Wind Chill:</h5>
+            <hr>
+            <p>Wind Speed: <span id="myWind">3.5</span>km/h</p>
+            <p>Wind Chill: <span id="output"></span></p>
         </section>
         <section>
             <h2>New Release</h2>
@@ -155,7 +152,7 @@
         <div class="footer-sub">
             <p>&copy;<span id="year"></span> Argentine Chamber |<strong> Josue Benjamin Centurion | </strong> WDD230
                 Project |
-            <p id="updated"></p>
+                <p id="updated"></p>
 
 
         </div>
