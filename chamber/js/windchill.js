@@ -1,3 +1,4 @@
+document.getElementById("output").innerHTML = ""
 
 
 const tempConversor = (temp, windSpeed) => {
@@ -11,13 +12,7 @@ const tempConversor = (temp, windSpeed) => {
     }
 }
 
+let inputTemp = Number(document.getElementById("myTemp").innerHTML)
+let inputWind = Number(document.getElementById("myWind").innerHTML)
 
-
-document.querySelector("#windChillBtn").addEventListener("click", () => {
-    document.getElementById("output").innerHTML = ""
-    let inputTemp = document.getElementById("myTemp").value
-    let inputWind = document.getElementById("myWind").value
-
-    document.getElementById("output").innerHTML += `Wind Chill: ${tempConversor(inputTemp, inputWind)}` 
-})
-
+document.getElementById("output").innerHTML += `${tempConversor(inputTemp, inputWind)} ºF`
