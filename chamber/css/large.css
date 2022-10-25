@@ -114,4 +114,8 @@
         width: 35%;
 
     }
+/* ====================== DISCOVER PAGE ====================  */
+.main-discover {
+    grid-template-columns: 1fr 1fr 1fr;
+}
 }
