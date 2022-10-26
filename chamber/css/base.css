@@ -7,17 +7,17 @@
 }
 
 ::placeholder {
-  color: var(--constrast-backgr-subh);
-  opacity: 1; 
+    color: var(--constrast-backgr-subh);
+    opacity: 1;
 }
 
 body {
     display: grid;
     grid-template-columns: 1fr;
     margin: 0px auto;
-    font-family: "Roboto Mono","Open Sans", "sans";
+    font-family: "Roboto Mono", "Open Sans", "sans";
     padding: 0;
-    
+
 }
 
 header {
@@ -41,14 +41,14 @@ header {
     grid-column: 1/5;
     grid-row: 4/4;
 }
-    
+
 i {
-    cursor:pointer;
+    cursor: pointer;
 }
 
-#myDIV p{
+#myDIV p {
     padding-left: .5em;
-    font-size: .7em; 
+    font-size: .7em;
 
 }
 
@@ -57,14 +57,14 @@ i {
     height: 20px;
     align-self: center;
     margin-right: .5em;
-    
+
 }
 
 .name {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-   
+
 }
 
 .name img {
@@ -187,7 +187,7 @@ main {
 .hero-section img {
     width: 100%;
     min-height: 226px;
-    
+
 }
 
 .hero-section {
@@ -202,7 +202,7 @@ main {
     padding: .5rem;
     opacity: 0.9;
     font-size: .5em;
-    text-shadow:  1px 1px  var(--constrast-backgr-subh);
+    text-shadow: 1px 1px var(--constrast-backgr-subh);
 }
 
 .join-btn {
@@ -234,7 +234,7 @@ p {
     font-size: 13px;
 }
 
-.spotlight a{
+.spotlight a {
     text-decoration: none;
     color: var(--constrast-backgr-subh);
     box-shadow: 0px 4px 4px var(--constrast-backgr-main);
@@ -291,6 +291,7 @@ input {
     padding: .25em;
 
 }
+
 #windChillBtn {
     border-radius: .3em;
     background-color: var(--backgr-subheadings);
@@ -346,28 +347,52 @@ footer img {
 img[data-src] {
     filter: blur(0.2em);
     transition: filter 0.2s;
-  }
-  
+}
+
 .discover-img {
-    border: solid 1px darkcyan;
+    border: solid 1px var(--backgr-subheadings);
     width: 90%;
     align-self: center;
     filter: blur(0em);
-    transition: filter 0.2s;
+    transition: filter 0.1s;
     margin: .3em auto;
+    border-radius: 0.2em;
 }
 
+.discover-img:hover {
+    transform: scaleX(-1);
+
+}
 .building {
-    margin: 1em 1em;
+    margin: 0.5em;
     text-align: center;
 }
 
-.building p , ul {
+.building p {
+    padding: .5em;
+}
+
+.building ul,
+.building p {
     font-size: .8em;
     text-align: left;
     margin: 0 1em;
+    border: solid 1px var(--constrast-backgr-main);
+    border-radius: .3em;
+    margin-top: .3em;
 }
 
-li {
-    padding: .4em;
+.building li {
+    padding: .7em;
+
+}
+
+.heading-discover {
+    text-align: center;
+    background: var(--distintive-color);
+    border-radius: .3em;
+    opacity: .9;
+    margin: 3em 1.5em 0em 1.5em;
+    color: var(--constrast-backgr-subh);
+    font-size: .8em;
 }
