@@ -357,12 +357,19 @@ img[data-src] {
     transition: filter 0.1s;
     margin: .3em auto;
     border-radius: 0.2em;
+    -webkit-filter: blur(3px);
+	filter: blur(3px);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
 }
 
 .discover-img:hover {
-    transform: scaleX(-1);
-
+    -webkit-filter: blur(0);
+	filter: blur(0);
 }
+
+
+
 .building {
     margin: 0.5em;
     text-align: center;
