@@ -6,7 +6,7 @@
     main {
         grid-template-rows: repeat(3, 1fr);
         grid-template-columns: 1fr 1.3fr 1.3fr 1fr;
-        grid-gap: .5em;
+        grid-gap: 0;
         max-width: 1200px;
         justify-self: center;
 
