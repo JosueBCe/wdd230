@@ -22,7 +22,7 @@ body {
 
 header {
     display: grid;
-    grid-template-columns: 1fr 1fr 0.7fr;
+    grid-template-columns:1fr .3fr 0.25fr;
     z-index: 0;
     background: var(--backgr-main);
 
@@ -68,7 +68,7 @@ i {
 }
 
 .name img {
-    width: 55%;
+    width: 30%;
     margin: .2em;
     border-radius: .6em;
 }
@@ -76,7 +76,7 @@ i {
 .name h1 {
     font-size: 0.7em;
     color: white;
-    margin: 0.7em 0em;
+    margin: 1em;
 }
 
 .icons {
@@ -86,7 +86,7 @@ i {
 }
 
 .icons img {
-    width: 80%;
+    width: 75%;
     padding: .3em;
     max-width: 32px;
     max-height: 32px;
