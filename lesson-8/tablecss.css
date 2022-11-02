@@ -26,8 +26,12 @@ tr:nth-child(1) {
     color: white;
 }
 
+
+tr:nth-child(2n +2) {
+    background-color: rgb(156, 233, 165);
+}
 tr:nth-child(2) {
-    background-color: rgb(104, 199, 115);
+    background-color: rgb(83, 160, 93);
 }
 
 th,
