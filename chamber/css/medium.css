@@ -201,7 +201,7 @@
 
     .thanks-div {
         margin: 10em auto;
-        padding: 3em 4em 4em 4em;
+        padding:3em;
         box-shadow: 1px 5px 10px var(--backgr-main);
 
     }
