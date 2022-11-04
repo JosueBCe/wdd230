@@ -170,5 +170,23 @@
     .building {
         text-align: center;
     }
+    
+/* ================== THANKS PAGE ======================= */
+
+.thanks-div {
+    margin: 10em auto;
+    padding: 2em;
 
 }
+form input {
+    width: 90%;
+}
+
+form fieldset, select, textarea {
+    width: 400px;
+
+}
+
+
+}
+

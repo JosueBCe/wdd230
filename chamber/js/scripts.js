@@ -19,8 +19,20 @@ let banner = document.querySelector("#banner")
 
 // In the main page displays today's date 
 
+
+
+// Date and Time form was loaded 
+
+if (title === "Join") {
+    let date = document.querySelector("#date")
+    date.innerHTML = d
+    
+}
+
+
 if (title != "Discover") {
     banner.innerHTML = d.toLocaleDateString('en-uk', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+
 } else {
 
     // DISPLAY TO THE USER THE LAST TIME HE/SHE VISITED THE WEBSITE
@@ -68,6 +80,7 @@ document.querySelector("#year").innerHTML = d.getFullYear();
 // Displaying the last time that the web page was modified 
 
 const date = new Object(document.lastModified);
+
 document.getElementById("updated").innerHTML = ` Last Modification: ${date}`;
 
 // Displaying the next meeting message on Mondays and Tuesdays (ONLY) 

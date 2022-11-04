@@ -142,22 +142,25 @@ nav ul li a {
 nav ul li.active a {
     background-color: var(--distintive-color);
     color: white;
+ 
 }
 
 nav ul li a:hover {
     background-color: var(--constrast-backgr-main);
     color: white;
+    transition: .5s;
 }
 
 nav ul {
     display: none;
+
 }
 
 nav ul.open {
     display: block;
     font-size: 1.2em;
     text-align-last: center;
-
+    transition: 1s;
 }
 
 #hamburgerBtn span:nth-child(1) {
@@ -402,4 +405,74 @@ img[data-src] {
     margin: 3em 1.5em 0em 1.5em;
     color: var(--constrast-backgr-subh);
     font-size: .8em;
+}
+
+
+/* =========================== JOIN PAGE ============================= */
+.heading-join {
+    text-align: center;
+    background-color: var(--backgr-subheadings);
+    box-shadow: 1px 1px 5px var(--constrast-backgr-main);
+    color: white;
+    padding: .5em;
+    margin: 2em auto;
+    border-radius: .5em ;
+}
+
+.main-join {
+    margin: 0 auto;
+    display: block;
+}
+
+.form-join {
+    align-self: center;    
+    margin: 2em auto;
+} 
+form input {
+    width: 85%;
+    background-color: var(--constrast-backgr-main);
+}
+
+.submitBtn {
+    width: 95%;
+    margin: .5em;
+    transition: 0.7s;
+}
+.submitBtn:hover {
+    width: 100%;
+    transition: 0.7s;
+    box-shadow: 1px 1px 1px black;
+    margin: 1em 0;
+}
+
+form fieldset, select, textarea {
+    display: grid;
+    width: 250px;
+    margin: 0 auto;
+    border-radius: .5em;
+    font-size: 1.2;
+}
+
+form label.top input:required {
+    border-left: red solid 6px;
+}
+
+form label.top input:required:valid {
+    border-left: green solid 6px;
+}
+
+label.top {
+    margin-bottom: 1em;
+}
+
+
+/* ================ THANKS PAGE ================================= */
+
+.main-thanks {
+    display: flex;
+}
+.thanks-div {
+    display: grid;
+    margin: 0em auto;
+    padding: 2em;
 }

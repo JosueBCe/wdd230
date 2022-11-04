@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Fill Me In">
+    <meta name="author" content="John Doe">
+
+    <!-- This start file was build by Paul Cheney  -->
+    <title>Join</title>
+
+    <!-- TELLS PHONES NOT TO LIE ABOUT THEIR WIDTH & stops the font from enlarging when a phone is turned sideways-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="/wdd230/chamber/css/base.css">
+    <link rel="stylesheet" href="/wdd230/chamber/css/medium.css">
+    <link rel="stylesheet" href="/wdd230/chamber/css/large.css">
+
+
+</head>
+
+<body>
+    <header>
+
+        <div class="name">
+            <img src="/wdd230/lesson3/images/logo.png" alt="Chamber logo">
+            <h1>Argentine Chamber of Commerce</h1>
+        </div>
+        <nav>
+            <ul id="primaryNav">
+                <li ><a href="index.html">Home</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="#">Directory</a></li>
+                <li class="active"><a href="#">Join</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="icons">
+            <a href="https://www.facebook.com/" target="_blank"><img src="/wdd230/chamber/images/facebook.png"
+                    alt="Facebook icon"></a>
+            <a href="https://www.instagram.com/" target="_blank"> <img src="/wdd230/chamber/images/instagram.png"
+                    alt="Instagram icon"></a>
+            <a href="https://www.linkedin.com/in/josuebcenturion/" target="_blank"><img
+                    src="/wdd230/chamber/images/linkedin.png" alt="Linkedin icon"></a>
+        </div>
+        <div class="btn"> <button id="hamburgerBtn"><span>&#9776;</span><span>x</span></button></div>
+        <div class="current-date">
+            <p><span id="banner">Welcome, Thank you for visiting Us! </span><span class="visits"></span></p>
+        </div>
+        <div id="myDIV">
+            <p>🤝🏼 Come join us for the chamber meet and greet Wednesday at 7:00 p.m.</p>
+            <i onclick="myFunction()">❌</i>
+        </div>
+    </header>
+    <main class="main-join">
+        <div class="heading-join">
+            <h2>Membership Application</h2>
+        </div>
+        <div class="form-join">
+        <form method="get" action="thanks.html">
+            <fieldset>
+                <legend>Applicant Information</legend>
+                <label class="top">First Name*<input type="text" name="fname" required></label>
+                <label class="top">Last Name*<input type="text" name="lname" required></label>
+                <label class="top">Phone*<input type="tel" name="phone"></label>
+                <label class="top">Email*<input type="email" name="email" required
+                        placeholder="someone@email.com"></label>
+                <label class="top"> Business Name/Title<input type="text" name="businessname" required></label>
+                <label class="top"> Business Position<input type="text" name="businessposition"  pattern="[A-Za-z- ]{6,}"></label>
+
+            </fieldset>
+            <fieldset>
+                <legend>Funding</legend>
+                <label class="top"> Membership Level
+                    <select name="subject">
+                        <option value="">Please Select 🔽🡇</option>
+                        <option value="software"><p> 1. NP Membership is for non <br> 
+                            profit organizations and there is no fee. </p>
+                        </option>
+                        <option value="creative">2. Bronze Membership.</option>
+                        <option value="info">3. Silver Membership</option>
+                        <option value="data">4. Gold Membership</option>
+                    </select>
+                </label>
+                <label> <textarea name="businessDescription" rows="4" cols="50">
+                </textarea></label>
+                <input type="hidden" name="date" id="date">
+            </fieldset>
+            <label><input type="submit" name="submitBtn" value="Send my Application" class="submitBtn"></label>
+        </form>
+    </div>
+    </main>
+
+    <footer>
+        <div class="footer-main">
+            <div class="footer-left">
+                <div class="footer-image">
+                    <img src="/wdd230/lesson3/images/logo-red.png" alt="Chamber logo">
+                </div>
+                <div class="footer-info">
+                    <p><strong> Argentine Chamber of Commerce </strong></p>
+                    <p>info</p>
+                </div>
+            </div>
+            <div class="footer-right">
+                <p>www.argchamber.org</p>
+                <p>+(54) 9 3624 000000</p>
+                <p><i class="fa fa-map-marker"></i> location Map</p>
+            </div>
+        </div>
+        <hr>
+        <div class="footer-sub">
+            <p>&copy;<span id="year"></span> Argentine Chamber |<strong> Josue Benjamin Centurion | </strong> WDD230
+                Project |
+            <p id="updated"></p>
+
+
+        </div>
+    </footer>
+    <script src="/wdd230/chamber/js/scripts.js"></script>
+</body>
+
+</html>
