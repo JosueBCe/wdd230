@@ -132,4 +132,18 @@
     .main-discover {
         grid-template-columns: 1fr 1fr 1fr;
     }
+    /* ======================== JOIN PAGE ======================== */
+    form input {
+        width: 85%;
+        background-color: var(--constrast-backgr-subh);
+    }
+
+    /* ================== THANKS PAGE ======================== */
+    
+    .thanks-div {
+        margin: 10em auto;
+        padding: 5em;
+        font-size: 1.2em;
+    }
+
 }

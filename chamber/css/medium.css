@@ -170,23 +170,43 @@
     .building {
         text-align: center;
     }
-    
-/* ================== THANKS PAGE ======================= */
 
-.thanks-div {
-    margin: 10em auto;
-    padding: 2em;
+    /* ============== JOIN PAGE ================ */
+
+    .main-join {
+        box-shadow: 1px 5px 10px var(--backgr-main);
+        padding: 1em;
+    }
+
+    .main-join:hover {
+
+        box-shadow: 3px 10px 25px var(--backgr-main);
+        border-radius: .3em;
+        transition: .5s;
+    }
+
+    form input {
+        width: 90%;
+    }
+
+    form fieldset,
+    select,
+    textarea {
+        width: 400px;
+
+    }
+
+
+    /* ================== THANKS PAGE ======================= */
+
+    .thanks-div {
+        margin: 10em auto;
+        padding: 3em 4em 4em 4em;
+        box-shadow: 1px 5px 10px var(--backgr-main);
+
+    }
+
+
+
 
 }
-form input {
-    width: 90%;
-}
-
-form fieldset, select, textarea {
-    width: 400px;
-
-}
-
-
-}
-
