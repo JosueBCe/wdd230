@@ -200,10 +200,14 @@
     /* ================== THANKS PAGE ======================= */
 
     .thanks-div {
-        margin: 10em auto;
+        margin: 10em 1em;
         padding:3em;
         box-shadow: 1px 5px 10px var(--backgr-main);
 
+    }
+
+    .thanks-div h1 {
+        margin: 1.5em auto;
     }
 
 

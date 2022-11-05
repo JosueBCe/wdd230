@@ -6,10 +6,6 @@
     --distintive-color: #E63946;
 }
 
-::placeholder {
-    color: var(--constrast-backgr-subh);
-    opacity: 1;
-}
 
 body {
     display: grid;
@@ -513,9 +509,14 @@ label.top {
 .thanks-div {
     display: grid;
     text-align: center;
-    margin: 2em auto;
+    margin: 1.5em;
     padding: 2em 1em;
     border-radius: .5em;
         box-shadow: 1px 5px 10px var(--backgr-main);
         
+}
+
+::placeholder {
+    color: var(--backgr-subheadings);
+    opacity: 1;
 }
