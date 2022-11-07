@@ -130,7 +130,14 @@
 
     /* ====================== DISCOVER PAGE ====================  */
     .main-discover {
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr;
+    }
+    .building {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin: 1.5em auto;
+        align-items: center;  
+        font-size: 17px;
     }
     /* ======================== JOIN PAGE ======================== */
     form input {
