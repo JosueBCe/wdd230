@@ -154,14 +154,14 @@ const outputInHtml = (processedData) => {
     companies = processedData.companies
 
     html = companies.map(company => 
-        ` <div class="company">
-        <h2>${company.name}</h2>
-        <img src="${company.imageurl}" alt="${company.name}">
-        <p>${company.industry}</p>
-   
-        <p>Visit ${company.websiteurl}</p>
-
-    </div>
+        `
+        <div class="company">
+            <h2>${company.name}</h2>
+            <img src="${company.imageurl}" alt="${company.name}">
+            <p>${company.industry}</p> 
+           <p>Visit <a href="${company.websiteurl}" target="_blank"> ${company.websiteurl}</p></a>
+            <p>${company.phonenumber}</p>
+            </div>
         `
         ).join("")
 
@@ -173,19 +173,19 @@ displayCompanies(data)
 
 const gridbutton = document.querySelector("#grid-icon");
 const listbutton = document.querySelector("#list");
-const displayArticle = document.querySelector("article");
+const displayCompany = document.querySelector("#companies");
 
 // The following code could be written cleaner. How? We may have to simplfiy our HTMl and think about a default view.
 
 gridbutton.addEventListener("click", () => {
 	// example using arrow function
-	displayArticle.classList.add("grid");
-	displayArticle.classList.remove("list");
+	displayCompany.classList.add("grid");
+	displayCompany.classList.remove("list");
 });
 
 listbutton.addEventListener("click", showList); // example using defined function
 
 function showList() {
-	displayArticle.classList.add("list");
-	displayArticle.classList.remove("grid");
+	displayCompany.classList.add("list");
+	displayCompany.classList.remove("grid");
 }

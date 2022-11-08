@@ -159,7 +159,9 @@
     justify-content: space-around;
 
 }
-
+.company p:nth-child(3){
+    display:block;
+}
 
 
 
