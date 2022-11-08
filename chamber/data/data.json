@@ -1,0 +1,85 @@
+{
+    "companies": [
+        {
+            "name": "YPF Inc",
+            "phonenumber": "+54 (11) 5441 2000",
+            "websiteurl": "https://www.ypf.com",
+            "address": "Macacha Guemes 515,Buenos Aires, 1106",
+            "membershiplevel": 4,
+            "industry": "Oil/gas Exploration",
+            "imageurl": "https://100seguro.com.ar/wp-content/uploads/2015/10/YPF-Logo-chico1.jpg"
+        },
+        {
+            "name": "Grupo Supervielle S.A.",
+            "phonenumber": "+54 (11) 4324 8158",
+            "websiteurl": "www.gruposupervielle.com.ar",
+            "address": "Bartolome Mitre 434 5th Floor,Buenos Aires, C1036AAH",
+            "membershiplevel": 3,
+            "industry": "Financial Services",
+            "imageurl": "https://img.favpng.com/19/0/6/banco-supervielle-logo-bank-brand-debit-card-png-favpng-vQL3JZ9PiVZS5fKGLkLkxWLjh.jpg"
+        },
+        {
+            "name": "Molinos Rio de la Plata S.A.",
+            "phonenumber": "54 (11) 4340 1100",
+            "websiteurl": "http://www.molinos.com.ar/",
+            "address": "Uruguay 4075,Victoria, B1644HKG",
+            "membershiplevel": 2,
+            "industry": "FoodCompany",
+            "imageurl": "https://upload.wikimedia.org/wikipedia/commons/a/ae/Logo_Molinos_Wiki2.png"
+        },
+        {
+            "name": "Grupo Clarín S.A.",
+            "phonenumber": "+54 (11) 4309 7500",
+            "websiteurl": "www.grupoclarin.com",
+            "address": "Piedras 1743,Buenos Aires, 1140 Argentina",
+            "membershiplevel": 4,
+            "industry": "Media Company",
+            "imageurl": "https://media.cdn.eldestapeweb.com/eldestape/062019/1559425746268.jpg"
+        },
+        {
+            "name": "Central Puerto S.A.",
+            "phonenumber": "+54 11 4317 5000",
+            "websiteurl": "https://www.centralpuerto.com",
+            "address": "Avenida Tomas Alva Edison 2701,Buenos Aires, C1104BAB, Argentina,",
+            "membershiplevel": 2,
+            "industry": "Renewable Energy Company",
+            "imageurl": "https://s3-symbol-logo.tradingview.com/central-puerto--600.png"
+        },
+        {
+            "name": "Pampa Energía S.A.",
+            "phonenumber": "+54 11 4344 6000",
+            "websiteurl": "http://www.pampaenergia.com/",
+            "address": "Maipu 1, Buenos Aires, C1425DS Argentina",
+            "membershiplevel": 1,
+            "industry": "Utilities Company",
+            "imageurl": "https://s3-symbol-logo.tradingview.com/pampa-energia--600.png"
+        },
+        {
+            "name": "Vitopel S.A.",
+            "phonenumber": "+54 (35) 2447 8780",
+            "websiteurl": "www.vitopel.com",
+            "address": "Ruta Nacional, nº 9, Km 783 Villa del Totoral, Córdoba, X5236ZAA  Argentina",
+            "membershiplevel": 1,
+            "industry": "Chemicals Company",
+            "imageurl": "https://www.exportadoresdecordoba.com/images_db/logos/220px/20601_logo.jpg"
+        },
+        {
+            "name": "Despegar.com Corp.",
+            "phonenumber": "+54 (11) 4894 3500",
+            "websiteurl": "http://www.despegar.com.ar/",
+            "address": "uana Manso 1069 Floor 5, Buenos Aires, C1107CBU Argentina",
+            "membershiplevel": 1,
+            "industry": "Internet Software And ServicesCompany",
+            "imageurl": "https://media.glassdoor.com/sqll/656503/despegar-com-squarelogo-1576172927596.png"
+        },
+        {
+            "name": "Accenture ",
+            "phonenumber": "1 (312) 842-5012",
+            "websiteurl": "https://www.accenture.com/ar-es",
+            "address": "24 de Noviembre 2120, Parque Patricios. CABA, Buenos Aires,",
+            "membershiplevel": 19,
+            "industry": "Business Counsulting",
+            "imageurl": "https://infonegocios.info/content/images/2022/07/20/17431/conversions/accentur-logo-top-100-brands-01-cba-medium-size.jpg"
+        }
+    ]
+}

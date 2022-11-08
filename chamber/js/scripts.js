@@ -130,3 +130,62 @@ if ("IntersectionObserver" in window) {
     });
 }
 
+
+/* ================= DIRECTORY PAGE ==================== */
+
+data = "data/data.json"
+displayComp = document.getElementById("companies") 
+
+const displayCompanies = (data) => {
+    // Fetch the Data 
+    fetch(data)
+    .then(function (response) {
+    // Convert to a Json object
+        return response.json();
+    })
+    .then(function (jsonObject) {
+        console.log(jsonObject)
+    // Displays the Data in the HTML 
+        outputInHtml(jsonObject)
+    });
+}
+
+const outputInHtml = (processedData) => {
+    companies = processedData.companies
+
+    html = companies.map(company => 
+        ` <div class="company">
+        <h2>${company.name}</h2>
+        <img src="${company.imageurl}" alt="${company.name}">
+        <p>${company.industry}</p>
+   
+        <p>Visit ${company.websiteurl}</p>
+
+    </div>
+        `
+        ).join("")
+
+    displayComp.innerHTML += html
+}
+
+displayCompanies(data)
+
+
+const gridbutton = document.querySelector("#grid-icon");
+const listbutton = document.querySelector("#list");
+const displayArticle = document.querySelector("article");
+
+// The following code could be written cleaner. How? We may have to simplfiy our HTMl and think about a default view.
+
+gridbutton.addEventListener("click", () => {
+	// example using arrow function
+	displayArticle.classList.add("grid");
+	displayArticle.classList.remove("list");
+});
+
+listbutton.addEventListener("click", showList); // example using defined function
+
+function showList() {
+	displayArticle.classList.add("list");
+	displayArticle.classList.remove("grid");
+}

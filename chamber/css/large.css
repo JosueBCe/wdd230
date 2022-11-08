@@ -147,5 +147,20 @@
 
     /* ================== THANKS PAGE ======================== */
     
+/* =============== DIRECTORY PAGE =================== */
+.grid {
+	max-width: 900px;
+    
+}
+
+.list .company {
+    display: flex;
+	flex-direction: row;
+    justify-content: space-around;
+
+}
+
+
+
 
 }
