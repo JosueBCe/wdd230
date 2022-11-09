@@ -170,17 +170,20 @@ if (title == "Directory") {
 
     displayCompanies(data)
 
-
+    
     const gridbutton = document.querySelector("#grid-icon");
     const listbutton = document.querySelector("#list");
     const displayCompany = document.querySelector("#companies");
 
     // The following code could be written cleaner. How? We may have to simplfiy our HTMl and think about a default view.
-
+    listbutton.style.display = "block";
+    gridbutton.style.display = "none";
     gridbutton.addEventListener("click", () => {
         // example using arrow function
         displayCompany.classList.add("grid");
         displayCompany.classList.remove("list");
+        gridbutton.style.display = "none";
+        listbutton.style.display = "block";
     });
 
     listbutton.addEventListener("click", showList); // example using defined function
@@ -188,5 +191,7 @@ if (title == "Directory") {
     function showList() {
         displayCompany.classList.add("list");
         displayCompany.classList.remove("grid");
+        listbutton.style.display = "none";
+        gridbutton.style.display = "block";
     }
 }

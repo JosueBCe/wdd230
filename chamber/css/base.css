@@ -550,8 +550,7 @@ label.top {
 }
 
 .menu img {
-    
-    width: 27%;
+    width: 55%;
 	padding: .5rem;
     border: solid 2px var(--backgr-main);
     border-radius: .5rem;
