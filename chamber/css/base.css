@@ -64,9 +64,11 @@ i {
 }
 
 .name img {
-    width: 30%;
+    width: 100%;
     margin: .2em;
     border-radius: .6em;
+      max-width: 55px;
+        max-height: 75px;
 }
 
 .name h1 {
@@ -527,9 +529,7 @@ label.top {
 
 
 #main-directory {
-    grid-column: 1/3;
-    grid-row: 1/3;
-	margin: 0 auto;
+    margin: 2.5rem 0;
 	border: 1px solid #bbb;
 	padding: 0.5rem;
 	max-width: 700px;
@@ -539,7 +539,7 @@ label.top {
 }
 .menu {
     margin: 1rem auto;
-    border: 1px solid var(--constrast-backgr-main);
+    border: 2px solid var(--constrast-backgr-main);
     border-radius: .5rem;
     padding: 0.5rem;
     text-align: center;
@@ -635,9 +635,11 @@ label.top {
 }
 
 .company a {
-	font-family: "Roboto", Arial, sans-serif;
-	font-size: 0.9rem;
+	font-size: .9em;
+    color: var(--backgr-main);
+    text-decoration: underline;
 }
+
 
 .company img {
     border-radius: .3rem;

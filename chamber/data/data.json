@@ -20,7 +20,7 @@
         },
         {
             "name": "Molinos Rio de la Plata S.A.",
-            "phonenumber": "54 (11) 4340 1100",
+            "phonenumber": "+54 (11) 4340 1100",
             "websiteurl": "http://www.molinos.com.ar/",
             "address": "Uruguay 4075,Victoria, B1644HKG",
             "membershiplevel": 2,
@@ -38,7 +38,7 @@
         },
         {
             "name": "Central Puerto S.A.",
-            "phonenumber": "+54 11 4317 5000",
+            "phonenumber": "+54 (11) 4317 5000",
             "websiteurl": "https://www.centralpuerto.com",
             "address": "Avenida Tomas Alva Edison 2701,Buenos Aires, C1104BAB, Argentina,",
             "membershiplevel": 2,
@@ -47,7 +47,7 @@
         },
         {
             "name": "Pampa Energía S.A.",
-            "phonenumber": "+54 11 4344 6000",
+            "phonenumber": "+54 (11) 4344 6000",
             "websiteurl": "http://www.pampaenergia.com/",
             "address": "Maipu 1, Buenos Aires, C1425DS Argentina",
             "membershiplevel": 1,
@@ -74,7 +74,7 @@
         },
         {
             "name": "Accenture ",
-            "phonenumber": "1 (312) 842-5012",
+            "phonenumber": "+1 (312) 842-5012",
             "websiteurl": "https://www.accenture.com/ar-es",
             "address": "24 de Noviembre 2120, Parque Patricios. CABA, Buenos Aires,",
             "membershiplevel": 19,
