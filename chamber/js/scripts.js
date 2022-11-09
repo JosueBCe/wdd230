@@ -26,7 +26,7 @@ let banner = document.querySelector("#banner")
 if (title === "Join") {
     let date = document.querySelector("#date")
     date.innerHTML = d
-    
+
 }
 
 
@@ -132,29 +132,29 @@ if ("IntersectionObserver" in window) {
 
 
 /* ================= DIRECTORY PAGE ==================== */
+if (title == "Directory") {
+    data = "data/data.json"
+    displayComp = document.getElementById("companies")
 
-data = "data/data.json"
-displayComp = document.getElementById("companies") 
+    const displayCompanies = (data) => {
+        // Fetch the Data 
+        fetch(data)
+            .then(function (response) {
+                // Convert to a Json object
+                return response.json();
+            })
+            .then(function (jsonObject) {
+                console.log(jsonObject)
+                // Displays the Data in the HTML 
+                outputInHtml(jsonObject)
+            });
+    }
 
-const displayCompanies = (data) => {
-    // Fetch the Data 
-    fetch(data)
-    .then(function (response) {
-    // Convert to a Json object
-        return response.json();
-    })
-    .then(function (jsonObject) {
-        console.log(jsonObject)
-    // Displays the Data in the HTML 
-        outputInHtml(jsonObject)
-    });
-}
+    const outputInHtml = (processedData) => {
+        companies = processedData.companies
 
-const outputInHtml = (processedData) => {
-    companies = processedData.companies
-
-    html = companies.map(company => 
-        `
+        html = companies.map(company =>
+            `
         <div class="company">
             <h2>${company.name}</h2>
             <img src="${company.imageurl}" alt="${company.name}">
@@ -165,27 +165,28 @@ const outputInHtml = (processedData) => {
         `
         ).join("")
 
-    displayComp.innerHTML += html
-}
+        displayComp.innerHTML += html
+    }
 
-displayCompanies(data)
+    displayCompanies(data)
 
 
-const gridbutton = document.querySelector("#grid-icon");
-const listbutton = document.querySelector("#list");
-const displayCompany = document.querySelector("#companies");
+    const gridbutton = document.querySelector("#grid-icon");
+    const listbutton = document.querySelector("#list");
+    const displayCompany = document.querySelector("#companies");
 
-// The following code could be written cleaner. How? We may have to simplfiy our HTMl and think about a default view.
+    // The following code could be written cleaner. How? We may have to simplfiy our HTMl and think about a default view.
 
-gridbutton.addEventListener("click", () => {
-	// example using arrow function
-	displayCompany.classList.add("grid");
-	displayCompany.classList.remove("list");
-});
+    gridbutton.addEventListener("click", () => {
+        // example using arrow function
+        displayCompany.classList.add("grid");
+        displayCompany.classList.remove("list");
+    });
 
-listbutton.addEventListener("click", showList); // example using defined function
+    listbutton.addEventListener("click", showList); // example using defined function
 
-function showList() {
-	displayCompany.classList.add("list");
-	displayCompany.classList.remove("grid");
+    function showList() {
+        displayCompany.classList.add("list");
+        displayCompany.classList.remove("grid");
+    }
 }
