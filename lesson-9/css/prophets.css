@@ -9,6 +9,9 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(285px, 1fr));
     justify-content: center;
     justify-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+
 }
 
 main,
@@ -47,7 +50,16 @@ section {
     font-size: 1rem;
     border-radius: .3rem;
     max-width: 410px;
+    transition: filter 0.1s;
+    transition: .8s all ease-in-out;
+}
 
+
+section:hover {
+    box-shadow: 8px 7px 9px 3px rgb(136, 136, 136);
+    -webkit-transform: translateX(-5px);
+    transform: translateX(-5px);
+    transition: .7s ease;
 }
 
 section>p {
@@ -57,10 +69,14 @@ section>p {
 img {
     width: 80%;
     max-width: 325px;
-    box-shadow: 0 0 30px rgb(119, 138, 179);
+
     margin: .75rem;
     border: 1px solid #333;
     border-radius: .3rem;
+}
+
+img:hover {
+    box-shadow: 0 0 30px rgb(119, 138, 179);
 }
 
 
