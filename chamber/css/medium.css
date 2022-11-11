@@ -39,9 +39,8 @@
     }
 
     section img {
-        width: 40%;
-        max-width: 80px;
-        max-height: 80px;
+        width: 100%;
+        max-height: 100px;
     }
 
     section:nth-child(1) {
@@ -173,6 +172,7 @@
 
     /* ============== JOIN PAGE ================ */
 
+
     .main-join {
         box-shadow: 1px 5px 10px var(--backgr-main);
         padding: 1em;
@@ -185,6 +185,11 @@
         transition: .5s;
     }
 
+    .membership-div {
+        max-width: 400px;
+        margin: 2rem auto;
+        font-size: 1rem;
+    }
     form input {
         width: 90%;
     }

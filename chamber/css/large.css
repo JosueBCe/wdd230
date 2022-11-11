@@ -93,6 +93,7 @@
         width: 85%;
         margin: 0.5em auto;
         align-self: center;
+        padding: 2em 0.5em;
 
     }
 
@@ -140,6 +141,16 @@
         font-size: 17px;
     }
     /* ======================== JOIN PAGE ======================== */
+    .join-page {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin: 0 auto;
+        justify-items: center;
+        margin: 0 auto;
+        align-items: start;
+        grid-gap: 2rem;
+        
+    }
     form input {
         width: 85%;
         background-color: var(--constrast-backgr-subh);
