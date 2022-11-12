@@ -618,7 +618,7 @@ label.top {
     justify-content: center;
     justify-items: center;
     grid-column: 2/3;
-
+    transition: 1s all ease-in-out;
     margin: 0 auto;
 }
 
@@ -628,6 +628,8 @@ label.top {
     max-width: 1000px;
     align-items: center;
     margin: 0 auto;
+    transform: translateX(5px);
+    transition: 1s ease;
 }
 
 .list .company {
