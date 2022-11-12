@@ -535,14 +535,14 @@ label.top {
     padding: 0.5rem 1rem;
 }
 .membership-div h3 {
-    margin-top: 0;
+    margin: 0;
     box-shadow: 2px 1px 8px var(--constrast-backgr-main);
     padding: .5rem;
     border-radius: .2rem;
 }
 
 .membership-div li {
-    margin-bottom: 1.5em;
+    margin-bottom: 1em;
 
 }
 ::placeholder {
