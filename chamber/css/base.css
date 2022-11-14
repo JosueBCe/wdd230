@@ -48,6 +48,9 @@ i {
 
 }
 
+button {
+    cursor: pointer;
+}
 #myDIV i {
     width: 30px;
     height: 20px;
@@ -193,6 +196,7 @@ main {
 
 .hero-section {
     position: relative;
+    border-radius: 0;
 }
 
 .welcome-message {
@@ -217,6 +221,7 @@ main {
     box-shadow: 0 0 30px #333;
     opacity: 0.9;
     font-size: .5em;
+    cursor: pointer;
 }
 
 
@@ -229,8 +234,13 @@ section {
     align-items: center;
     padding: 0em .5em;
     box-shadow: 0 0 1px var(--backgr-subheadings);
+    border-radius: 0.5rem;
 }
 
+.weather-section {
+    background-color: var(--backgr-subheadings);
+    border: solid 7px var(--constrast-backgr-main);
+}
 p {
     font-size: 13px;
 }
@@ -324,7 +334,7 @@ footer {
     color: white;
     font-size: .8em;
     margin-top: 1.5em;
-
+    padding-top: 1rem;
 }
 
 
@@ -332,7 +342,8 @@ footer img {
     width: 35%;
     max-width: 95px;
     max-height: 95px;
-    margin-top: .2em
+    margin-top: 1em
+
 }
 
 .footer-sub {

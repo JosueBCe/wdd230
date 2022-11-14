@@ -58,7 +58,7 @@
             <div class="welcome-message">
                 <h2>Welcome, We are Argentina</h2>
             </div>
-            <div class="join-btn">
+            <div class="join-btn" onclick="window.location.href='https://josuebce.github.io/wdd230/chamber/index.html';">
                 <h2>Join the Chamber</h2>
             </div>
             <picture>
@@ -74,16 +74,18 @@
             <p>Join us for the grand opening of The Diamond Shack, Thursday at 1:00PM</p>
             <p><a href="#"></a>more info...</p>
         </section>
-        <section>
+        <section class="weather-section">
+            <!-- Keeps Placeholders for the Weather Information -->
             <h2>Weather</h2>
             <div class="weather">
-                <img src="/wdd230/chamber/images/weather-icon.webp" alt="Weather Icon Image">
+                <img src="/wdd230/chamber/images/weather-icon.webp" alt="Weather Icon Image" id="weatherImg">
                 <div class="temp"><span id="myTemp">40</span>ºF</div>
             </div>
-            <h4>CLEAR SKY</h4>
+            <h4 id="weatherDescrip">CLEAR SKY</h4>
             <hr>
             <p>Wind Speed: <span id="myWind">3.5</span>km/h</p>
-            <p>Wind Chill: <span id="output"></span></p>
+            <p>Wind Chill: <span id="windChill"></span></p>
+            <p>Humidity: <span id="humidity"></span></p>
         </section>
         <section>
             <h2>New Release</h2>
@@ -112,8 +114,8 @@
 
                 <h4>codo a codo, hasta que llegue lo mejor</h4>
                 <hr>
-                <p> https://mercadolibre.com/ </p>
-                <p><a href="https://investor.mercadolibre.com/contact-us">mercadolibre/contact-us</a></p>
+                <p>https://mercadolibre.com/</p>
+                <p><a href="https://investor.mercadolibre.com/contact-us">mercadolibre</a></p>
             </div>
             <div class="spotlight">
                 <h2>Le Utthe</h2>
@@ -127,7 +129,7 @@
             </div>
         </section>
         <section class="join-us">
-            <button class="btn-2">Join Us! </button>
+            <button class="btn-2" onclick="window.location.href='https://josuebce.github.io/wdd230/chamber/index.html';">Join Us! </button>
             <h5>Discover how to join the chamber of commerce and how it will benefit your organization!</h5>
         </section>
     </main>

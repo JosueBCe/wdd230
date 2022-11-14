@@ -4,7 +4,7 @@
     }
 
     main {
-        grid-template-rows: repeat(3, 1fr);
+        grid-template-rows: repeat(3, .4fr);
         grid-template-columns: 1fr 1.3fr 1.3fr 1fr;
         grid-gap: 0;
         max-width: 1200px;
@@ -62,10 +62,13 @@
     }
 
     section:nth-child(3) {
+        display: grid;
         grid-row: 2/3;
         grid-column: 1/2;
         font-size: 1em;
-
+        padding: 2em 0.5em;   
+         align-items: center;
+        align-content: center;
     }
 
     section:nth-child(4) {
