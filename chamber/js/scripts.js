@@ -17,10 +17,6 @@ const title = document.title
 
 let banner = document.querySelector("#banner")
 
-// In the main page displays today's date 
-
-
-
 // Date and Time form was loaded 
 
 if (title === "Join") {
@@ -30,11 +26,9 @@ if (title === "Join") {
 }
 
 
-if (title != "Discover") {
-    banner.innerHTML = d.toLocaleDateString('en-uk', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+banner.innerHTML = d.toLocaleDateString('en-uk', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
 
-} else {
-
+if (title == "Discover"){
     // DISPLAY TO THE USER THE LAST TIME HE/SHE VISITED THE WEBSITE
 
     let lastVisit = localStorage.getItem('last-visited');
@@ -43,7 +37,6 @@ if (title != "Discover") {
 
     const todaysDate = Number(new Date());
     // Hide the default message( if JS Fails Loading) 
-    banner.style.display = "none"
     // First visit
     if (lastVisit === null) {
         greetingMessage = "Welcome 🤵, This is your first Visit !"
@@ -68,7 +61,6 @@ if (title != "Discover") {
     let displayMessage = document.querySelector(".visits")
 
     displayMessage.textContent = greetingMessage;
-
 }
 
 
@@ -84,7 +76,7 @@ const date = new Object(document.lastModified);
 document.getElementById("updated").innerHTML = ` Last Modification: ${date}`;
 
 // Displaying the next meeting message on Mondays and Tuesdays (ONLY) 
-let day = d.getDay()
+let day = 1//d.getDay()
 
 function display() {
     if (day != 1 && day != 2) {

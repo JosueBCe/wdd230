@@ -100,7 +100,10 @@ button {
     justify-content: space-around;
     color: white;
     background-color: var(--backgr-subheadings);
-    font-size: 1em;
+    font-size: 13px;
+    height: 40px;
+    align-items: center;
+
 }
 
 nav {
@@ -267,6 +270,7 @@ section img {
 section:nth-child(1) {
     padding: 0em;
     border-radius: 0.5rem;
+    background-color: var(--constrast-backgr-subh);
 }
 
 section:nth-child(1) img {
