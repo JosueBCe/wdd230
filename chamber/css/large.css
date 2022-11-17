@@ -8,6 +8,7 @@
         grid-template-columns: 1fr 1.3fr 1.3fr 1fr;
         grid-gap: 0;
         max-width: 1200px;
+        row-gap: .7rem;
         justify-self: center;
 
     }
