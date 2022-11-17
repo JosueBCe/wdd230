@@ -1,5 +1,7 @@
 let windChill = document.getElementById("windChill")
 
+
+
 // select HTML elements in the document
 
 const url = "https://api.openweathermap.org/data/2.5/weather?q=Resistencia&appid=204dc8a602f98f1e1149ad7c488a52f4&units=imperial";
@@ -9,7 +11,9 @@ async function weaterMain() {
         //Fetch the Data from the API 
         const response = await fetch(url);
         if (response.ok) {
-            
+           
+        
+
             // Make the data in json form
             const data = await response.json();
             
