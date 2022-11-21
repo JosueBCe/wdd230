@@ -73,10 +73,10 @@ document.querySelector("#year").innerHTML = d.getFullYear();
 
 const date = new Object(document.lastModified);
 
-document.getElementById("updated").innerHTML = ` Last Modification: ${date}`;
+document.getElementById("updated").innerHTML = ` Last Modification: ${date} `;
 
 // Displaying the next meeting message on Mondays and Tuesdays (ONLY) 
-let day = 1//d.getDay()
+let day = d.getDay()
 
 function display() {
     if (day != 1 && day != 2) {
