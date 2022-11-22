@@ -8,6 +8,8 @@ const button = document.getElementById("hamburgerBtn")
 button.onclick = () => toggleMenu()
 
 
+
+
 /* ============= Displaying Spotlights ================== */
 data = "data/data.json"
 const title = document.title
