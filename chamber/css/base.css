@@ -245,7 +245,10 @@ section {
     border: solid 7px var(--constrast-backgr-main);
 }
 p {
-    font-size: 13px;
+    font-size: 12px;
+}
+.spotlight p {
+    font-size: 11px;
 }
 
 .spotlight a {
@@ -702,4 +705,27 @@ label.top {
     .list .company img {
         display: block;
     }
+}
+
+
+/* =================== CONTACT PAGE ============================== */
+#contact-page .heading-join, #contact-page h3 {
+    background-color: var(--constrast-backgr-main);
+    box-shadow: none;
+}
+
+#contact-page .membership-div {
+   background-color: var(--backgr-main);
+   color: white;
+    box-shadow: 3px 5px 6px 4px var(--backgr-subheadings);
+}
+
+#contact-page ul {
+    list-style: none;
+    padding: .5rem;
+}
+
+.membership-div img {
+    width: 100%;
+    border-radius: .3rem;
 }

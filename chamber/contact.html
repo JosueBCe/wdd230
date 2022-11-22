@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Josue Centurion">
+    <meta name="description"
+        content="This is the Join page of the project chamber of commerce for the course WDD230 (BYU - Idaho). It presents a form that the user can submit to apply and be part of this organization">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto+Mono:wght@300;400&display=swap"
+        rel="stylesheet">
+    <link rel="icon" href="/wdd230/chamber/favicon.ico">
+
+    <title>Contact </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="/wdd230/chamber/css/base.css">
+    <link rel="stylesheet" href="/wdd230/chamber/css/medium.css">
+    <link rel="stylesheet" href="/wdd230/chamber/css/large.css">
+
+
+</head>
+
+<body>
+    <header>
+
+        <div class="name">
+            <a href="index.html"> <img src="/wdd230/lesson3/images/logo.png" alt="Chamber logo"></a>
+            <h1>Argentine Chamber of Commerce</h1>
+        </div>
+        <nav>
+            <ul id="primaryNav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li class="active"><a href="join.html">Join</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="icons">
+            <a href="https://www.facebook.com/" target="_blank"><img src="/wdd230/chamber/images/facebook.png"
+                    alt="Facebook icon"></a>
+            <a href="https://www.instagram.com/" target="_blank"> <img src="/wdd230/chamber/images/instagram.png"
+                    alt="Instagram icon"></a>
+            <a href="https://www.linkedin.com/in/josuebcenturion/" target="_blank"><img
+                    src="/wdd230/chamber/images/linkedin.png" alt="Linkedin icon"></a>
+        </div>
+        <div class="btn"> <button id="hamburgerBtn"><span>&#9776;</span><span>x</span></button></div>
+        <div class="current-date">
+            <p><span id="banner">Welcome, Thank you for visiting Us! </span><span class="visits"></span></p>
+        </div>
+        <div id="myDIV">
+            <p>🤝🏼 Come join us for the chamber meet and greet Wednesday at 7:00 p.m.</p>
+            <i onclick="myFunction()">❌</i>
+        </div>
+    </header>
+    <div class="heading-discover">
+        <h1>Contact Us </h1>
+    </div>
+    <div class="join-page" id="contact-page">
+        <div class="membership-div">
+            <h2 class="heading-join">Argentine Chamber of Commerce </h2>
+            <div>
+                <img src="/wdd230/chamber/images/chamber.webp" alt="">
+            </div>
+            <ul>
+                <li><strong>Address:</strong> Av. Leandro N. Alem 36</li>
+                <li><strong>Telephone:</strong> (54-11) 5300-9</li>
+                <li><strong>Email:</strong> argchamber@commerce.com</li>
+            </ul>
+    
+            <h3>Economic Development/Opportunity</h3>
+            <ul>
+                <li>Benjamin Centurion</li>
+                <li>Monday – Thursday: 9:00 a.m. to 4:30 p.m.</li>
+                <li>Friday: By Appointment Only</li>
+            </ul>
+
+        </div>
+        
+        <main class="main-join">
+            <div class="heading-join">
+                <h2>Contact Information</h2>
+            </div>
+            <div class="form-join">
+                <form method="get" action="thanks.html">
+                    <fieldset>
+                        <label class="top">First Name*<input autofocus type="text" name="fname" required></label>
+                        <label class="top">Last Name*<input type="text" name="lname" required></label>
+                        <label class="top">Email*<input type="email" name="email" required
+                                placeholder="mypersonal@email.com"></label>
+                        <label class="top"> Business Name/Title<input type="text" name="businessname" required></label>
+       
+
+                    </fieldset>
+                    <fieldset>
+
+                        <label>What questions do you have?<textarea name="businessDescription" rows="4" cols="50">
+                </textarea></label>
+                        <input type="hidden" name="date" id="date">
+                    </fieldset>
+                    <label><input type="submit" name="submitBtn" value="Send my Message" class="submitBtn"></label>
+                </form>
+            </div>
+        </main>
+
+    </div>
+
+    <footer>
+        <div class="footer-main">
+            <div class="footer-left">
+                <div class="footer-image">
+                    <img src="/wdd230/lesson3/images/logo-red.png" alt="Chamber logo">
+                </div>
+                <div class="footer-info">
+                    <p><strong> Argentine Chamber of Commerce </strong></p>
+                    <p>info</p>
+                </div>
+            </div>
+            <div class="footer-right">
+                <p>www.argchamber.org</p>
+                <p>+(54) 9 3624 000000</p>
+                <p><i class="fa fa-map-marker"></i> location Map</p>
+            </div>
+        </div>
+        <hr>
+        <div class="footer-sub">
+            <p>&copy;<span id="year"></span> Argentine Chamber |<strong> Josue Benjamin Centurion | </strong> WDD230
+                Project |
+            <p id="updated"></p>
+
+
+        </div>
+    </footer>
+    <script src="/wdd230/chamber/js/scripts.js"></script>
+</body>
+
+</html>

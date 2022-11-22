@@ -8,12 +8,73 @@ const button = document.getElementById("hamburgerBtn")
 button.onclick = () => toggleMenu()
 
 
+/* ============= Displaying Spotlights ================== */
+data = "data/data.json"
+const title = document.title
+if ( title == "Argentine Chamber of Commerce") {
+    displayspotlight = document.getElementById("spotlights")
 
+    const displayCompanies = (data) => {
+        // Fetch the Data 
+        fetch(data)
+            .then(function (response) {
+                // Convert to a Json object
+                return response.json();
+            })
+            .then(function (jsonObject) {
+                // Displays the Data in the HTML 
+                outputInHtml(jsonObject)
+            });
+    }
 
+    const outputInHtml = (processedData) => {
+        // getting the companies data
+        companies = processedData.companies
+        // Filtering company for membershiplevel grater or equal 3 
+        companiesFiltered = companies.filter(company => company.membershiplevel >= 3)
+        
+        // determine which companies to remove from the filtered list(3)
+        let excludeCompany1 = Math.floor(Math.random() * 5);
+        let excludeCompany2 = Math.floor(Math.random() * 4);
+        let excludeCompany3 = Math.floor(Math.random() * 3)
+        let excludeCompany = excludeCompany2 != excludeCompany1 ? excludeCompany2 : excludeCompany2 + 1 ;
+        let excludeCompany4 = excludeCompany3 != excludeCompany && excludeCompany3 != excludeCompany1 ? excludeCompany3 : excludeCompany2 + 2 ;
+        console.log(excludeCompany)
+        console.log(excludeCompany1)
+        console.log(excludeCompany4)
+      
+        
+        html = companiesFiltered.map(company => 
+        // Excluding the companies randomly selected  
+                company != companiesFiltered[excludeCompany1]
+            && company != companiesFiltered[excludeCompany]
+            && company != companiesFiltered[excludeCompany4]
+        // Formatting the 3 randomly selected company as html
+            ? `
+            <div class="spotlight">
+                <h2>${company.name}</h2>
+                <div class="images">
+                    <img src="${company.imageurl}" alt="${company.name}" loading="lazy">
+                </div>
+                <h4>${company.industry}</h4>
+                <hr>
+                <p>${company.address}</p>
+                <p><a href="${company.websiteurl}" target="_blank"> ${company.websiteurl}</p></a>
+            </div>
+            `
+
+        : ""
+        ).join("")
+
+        // Displaying the HTML Companies 
+        displayspotlight.innerHTML += html
+    }
+
+    displayCompanies(data)
+}
 
 const d = new Date()
 
-const title = document.title
 
 let banner = document.querySelector("#banner")
 
@@ -125,7 +186,7 @@ if ("IntersectionObserver" in window) {
 
 /* ================= DIRECTORY PAGE ==================== */
 if (title == "Directory") {
-    data = "data/data.json"
+
     displayComp = document.getElementById("companies")
 
     const displayCompanies = (data) => {
