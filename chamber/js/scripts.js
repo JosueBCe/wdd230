@@ -10,7 +10,6 @@ button.onclick = () => toggleMenu()
 document.cookie = "witcher=Geralt; SameSite=None; Secure"
 
 
-
 /* ============= Displaying Spotlights ================== */
 data = "data/data.json"
 const title = document.title
@@ -248,5 +247,17 @@ if (title == "Directory") {
         displayCompany.classList.remove("grid");
         listbutton.style.display = "none";
         gridbutton.style.display = "block";
+    }
+}
+
+if (title == "Thank You") {
+    
+const lastPageVisited = document.referrer.slice(-12);
+console.log(lastPageVisited)
+    if (lastPageVisited == "contact.html" || lastPageVisited == "d+my+Message"){
+        document.getElementById("success-msg").innerHTML = "Message Successfully Sent!"
+        document.getElementById("message").innerHTML = "Thanks for your Message"
+        document.getElementById("information").innerHTML = "As soon our agents are online, We will try to answer you!"
+
     }
 }
