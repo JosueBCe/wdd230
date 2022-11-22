@@ -7,6 +7,7 @@ const button = document.getElementById("hamburgerBtn")
 
 button.onclick = () => toggleMenu()
 
+document.cookie = "witcher=Geralt; SameSite=None; Secure"
 
 
 
@@ -34,23 +35,14 @@ if ( title == "Argentine Chamber of Commerce") {
         companies = processedData.companies
         // Filtering company for membershiplevel grater or equal 3 
         companiesFiltered = companies.filter(company => company.membershiplevel >= 3)
-        
-        // determine which companies to remove from the filtered list(3)
-        let excludeCompany1 = Math.floor(Math.random() * 5);
-        let excludeCompany2 = Math.floor(Math.random() * 4);
-        let excludeCompany3 = Math.floor(Math.random() * 3)
-        let excludeCompany = excludeCompany2 != excludeCompany1 ? excludeCompany2 : excludeCompany2 + 1 ;
-        let excludeCompany4 = excludeCompany3 != excludeCompany && excludeCompany3 != excludeCompany1 ? excludeCompany3 : excludeCompany2 + 2 ;
-        console.log(excludeCompany)
-        console.log(excludeCompany1)
-        console.log(excludeCompany4)
-      
-        
+
+        excludeCompanies =  myRandomInts(3, 5)
+        console.log(excludeCompanies)
         html = companiesFiltered.map(company => 
         // Excluding the companies randomly selected  
-                company != companiesFiltered[excludeCompany1]
-            && company != companiesFiltered[excludeCompany]
-            && company != companiesFiltered[excludeCompany4]
+                company != companiesFiltered[excludeCompanies[0]]
+            && company != companiesFiltered[excludeCompanies[1]]
+            && company != companiesFiltered[excludeCompanies[2]]
         // Formatting the 3 randomly selected company as html
             ? `
             <div class="spotlight">
@@ -75,8 +67,16 @@ if ( title == "Argentine Chamber of Commerce") {
     displayCompanies(data)
 }
 
-const d = new Date()
+function myRandomInts(quantity, max){
+    const set = new Set()
+    while(set.size < quantity) {
+      set.add(Math.floor(Math.random() * max) + 1)
+    }
+    return [...set]
+  }
 
+
+const d = new Date()
 
 let banner = document.querySelector("#banner")
 
