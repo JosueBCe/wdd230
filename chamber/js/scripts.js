@@ -198,7 +198,7 @@ if (title == "Directory") {
                 return response.json();
             })
             .then(function (jsonObject) {
-                console.log(jsonObject)
+  
                 // Displays the Data in the HTML 
                 outputInHtml(jsonObject)
             });
