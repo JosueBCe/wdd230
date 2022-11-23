@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto+Mono:wght@300;400&display=swap');
+
 :root {
     --backgr-main: #1D3557;
     --backgr-subheadings: #457B9D;
@@ -52,6 +53,7 @@ i {
 button {
     cursor: pointer;
 }
+
 #myDIV i {
     width: 30px;
     height: 20px;
@@ -229,7 +231,8 @@ main {
 }
 
 
-section, #spotlights {
+section,
+#spotlights {
     background-color: var(--backgr-main);
     border: solid 1px gray;
     margin: .3em .6em;
@@ -245,12 +248,15 @@ section, #spotlights {
     background-color: var(--backgr-subheadings);
     border: solid 7px var(--constrast-backgr-main);
 }
+
 p {
     font-size: 12px;
 }
+
 .spotlight p {
     font-size: 11px;
 }
+
 #more-info {
     color: var(--distintive-color);
 }
@@ -263,7 +269,8 @@ p {
     padding: .2rem;
 }
 
-section img ,#spotlights img{
+section img,
+#spotlights img {
     width: 100%;
     max-width: 80px;
     max-height: 80px;
@@ -290,7 +297,7 @@ section:nth-child(1) img {
 
 
 
-#spotlights{
+#spotlights {
     grid-row: 5/7;
     padding: 0;
 }
@@ -357,12 +364,12 @@ footer img {
     max-width: 95px;
     max-height: 95px;
     margin-top: 1em
-
 }
-footer a{
+
+footer a {
     color: var(--constrast-backgr-subh);
     text-decoration: revert;
-    font-size: 15px;    
+    font-size: 15px;
 }
 
 .footer-sub {
@@ -564,6 +571,7 @@ label.top {
     font-size: .8rem;
     padding: 0.5rem 1rem;
 }
+
 .membership-div h3 {
     margin: 0;
     box-shadow: 2px 1px 8px var(--constrast-backgr-main);
@@ -575,6 +583,7 @@ label.top {
     margin-bottom: 1em;
 
 }
+
 ::placeholder {
     color: var(--backgr-subheadings);
     opacity: 1;
@@ -623,10 +632,9 @@ label.top {
     margin: 1rem;
     padding: 0.35rem;
     color: var(--backgr-main);
-
     flex-direction: column;
     align-items: center;
-    font-size: 1rem;
+    font-size: .8rem;
     border-radius: .3rem;
     min-width: 225px;
     max-width: 250px;
@@ -664,16 +672,12 @@ label.top {
 
 .list .company {
     display: flex;
-    font-size: .6rem;
     align-items: flex-start;
-    max-width: 240px;
-    max-height: 350px;
     margin: 1.5em;
 
 }
 
 .grid .company {
-    flex-direction: column;
     text-align: center;
     justify-content: center;
 }
@@ -707,8 +711,8 @@ label.top {
 .company img {
     border-radius: .3rem;
     height: 100px;
-    max-width: 100%;
-    /* Images are jerks - Seattle*/
+    width: 100px;
+
 }
 
 @media (min-width: 700px) {
@@ -719,14 +723,15 @@ label.top {
 
 
 /* =================== CONTACT PAGE ============================== */
-#contact-page .heading-join, #contact-page h3 {
+#contact-page .heading-join,
+#contact-page h3 {
     background-color: var(--constrast-backgr-main);
     box-shadow: none;
 }
 
 #contact-page .membership-div {
-   background-color: var(--backgr-main);
-   color: white;
+    background-color: var(--backgr-main);
+    color: white;
     box-shadow: 3px 5px 6px 4px var(--backgr-subheadings);
 }
 
