@@ -250,12 +250,16 @@ p {
 .spotlight p {
     font-size: 11px;
 }
+#more-info {
+    color: var(--distintive-color);
+}
 
 .spotlight a {
-    text-decoration: none;
+    border: solid 1px var(--constrast-backgr-main);
+    border-radius: .3rem;
     color: var(--constrast-backgr-subh);
-    box-shadow: 0px 4px 4px var(--constrast-backgr-main);
-    padding: .3em;
+    margin-right: 1rem;
+    padding: .2rem;
 }
 
 section img ,#spotlights img{
@@ -353,6 +357,11 @@ footer img {
     max-height: 95px;
     margin-top: 1em
 
+}
+footer a{
+    color: var(--constrast-backgr-subh);
+    text-decoration: revert;
+    font-size: 15px;    
 }
 
 .footer-sub {

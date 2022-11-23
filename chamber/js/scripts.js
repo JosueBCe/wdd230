@@ -52,7 +52,7 @@ if ( title == "Argentine Chamber of Commerce") {
                 <h4>${company.industry}</h4>
                 <hr>
                 <p>${company.address}</p>
-                <p><a href="${company.websiteurl}" target="_blank"> ${company.websiteurl}</p></a>
+                <p><a href="${company.websiteurl}" target="_blank"> ${company.websiteurl}</a></p>
             </div>
             `
 
@@ -211,7 +211,7 @@ if (title == "Directory") {
             `
         <div class="company">
             <h2>${company.name}</h2>
-            <img src="${company.imageurl}" alt="${company.name}">
+            <a href="${company.websiteurl}" target="_blank"><img src="${company.imageurl}" alt="${company.name}"></a>
             <p>${company.industry}</p> 
            <p>Visit <a href="${company.websiteurl}" target="_blank"> ${company.websiteurl}</p></a>
             <p>${company.phonenumber}</p>
