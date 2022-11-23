@@ -228,7 +228,7 @@ main {
 }
 
 
-section {
+section, #spotlights {
     background-color: var(--backgr-main);
     border: solid 1px gray;
     margin: .3em .6em;
@@ -258,7 +258,7 @@ p {
     padding: .3em;
 }
 
-section img {
+section img ,#spotlights img{
     width: 100%;
     max-width: 80px;
     max-height: 80px;
@@ -285,7 +285,7 @@ section:nth-child(1) img {
 
 
 
-section:nth-child(5) {
+#spotlights{
     grid-row: 5/7;
     padding: 0;
 }
