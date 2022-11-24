@@ -10,71 +10,9 @@ button.onclick = () => toggleMenu()
 document.cookie = "witcher=Geralt; SameSite=None; Secure"
 
 
-/* ============= Displaying Spotlights ================== */
+
+let title = document.title
 data = "data/data.json"
-const title = document.title
-if ( title == "Argentine Chamber of Commerce") {
-    displayspotlight = document.getElementById("spotlights")
-
-    const displayCompanies = (data) => {
-        // Fetch the Data 
-        fetch(data)
-            .then(function (response) {
-                // Convert to a Json object
-                return response.json();
-            })
-            .then(function (jsonObject) {
-                // Displays the Data in the HTML 
-                outputInHtml(jsonObject)
-            });
-    }
-
-    const outputInHtml = (processedData) => {
-        // getting the companies data
-        companies = processedData.companies
-        // Filtering company for membershiplevel grater or equal 3 
-        companiesFiltered = companies.filter(company => company.membershiplevel >= 3)
-
-        excludeCompanies =  myRandomInts(3, 5)
-        console.log(excludeCompanies)
-        html = companiesFiltered.map(company => 
-        // Excluding the companies randomly selected  
-                company != companiesFiltered[excludeCompanies[0]]
-            && company != companiesFiltered[excludeCompanies[1]]
-            && company != companiesFiltered[excludeCompanies[2]]
-        // Formatting the 3 randomly selected company as html
-            ? `
-            <div class="spotlight">
-                <h2>${company.name}</h2>
-                <div class="images">
-                    <img src="${company.imageurl}" alt="${company.name}" loading="lazy">
-                </div>
-                <h4>${company.industry}</h4>
-                <hr>
-                <p>${company.address}</p>
-                <p><a href="${company.websiteurl}" target="_blank"> ${company.websiteurl}</a></p>
-            </div>
-            `
-
-        : ""
-        ).join("")
-
-        // Displaying the HTML Companies 
-        displayspotlight.innerHTML += html
-    }
-
-    displayCompanies(data)
-}
-
-function myRandomInts(quantity, max){
-    const set = new Set()
-    while(set.size < quantity) {
-      set.add(Math.floor(Math.random() * max) + 1)
-    }
-    return [...set]
-  }
-
-
 const d = new Date()
 
 let banner = document.querySelector("#banner")
@@ -90,7 +28,7 @@ if (title === "Join") {
 
 banner.innerHTML = d.toLocaleDateString('en-uk', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
 
-if (title == "Discover"){
+if (title == "Discover") {
     // DISPLAY TO THE USER THE LAST TIME HE/SHE VISITED THE WEBSITE
 
     let lastVisit = localStorage.getItem('last-visited');
@@ -198,7 +136,7 @@ if (title == "Directory") {
                 return response.json();
             })
             .then(function (jsonObject) {
-  
+
                 // Displays the Data in the HTML 
                 outputInHtml(jsonObject)
             });
@@ -224,7 +162,7 @@ if (title == "Directory") {
 
     displayCompanies(data)
 
-    
+
     const gridbutton = document.querySelector("#grid-icon");
     const listbutton = document.querySelector("#list");
     const displayCompany = document.querySelector("#companies");
@@ -251,10 +189,9 @@ if (title == "Directory") {
 }
 
 if (title == "Thank You") {
-    
-const lastPageVisited = document.referrer.slice(-12);
-console.log(lastPageVisited)
-    if (lastPageVisited == "contact.html" || lastPageVisited == "d+my+Message"){
+
+    const lastPageVisited = document.referrer.slice(-12);
+    if (lastPageVisited == "contact.html" || lastPageVisited == "d+my+Message") {
         document.getElementById("success-msg").innerHTML = "Message Successfully Sent!"
         document.getElementById("message").innerHTML = "Thanks for your Message"
         document.getElementById("information").innerHTML = "As soon our agents are online, We will try to answer you!"

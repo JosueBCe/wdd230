@@ -64,3 +64,68 @@ const tempConversor = (temp, windSpeed) => {
         return `N/A`
     }
 }
+
+/* ============= Displaying Spotlights ================== */
+data = "data/data.json"
+const titl = document.title
+if ( titl == "Argentine Chamber of Commerce") {
+    displayspotlight = document.getElementById("spotlights")
+
+    const displayCompanies = (data) => {
+        // Fetch the Data 
+        fetch(data)
+            .then(function (response) {
+                // Convert to a Json object
+                return response.json();
+            })
+            .then(function (jsonObject) {
+                // Displays the Data in the HTML 
+                outputInHtml(jsonObject)
+            });
+    }
+
+    const outputInHtml = (processedData) => {
+        // getting the companies data
+        companies = processedData.companies
+        // Filtering company for membershiplevel grater or equal 3 
+        companiesFiltered = companies.filter(company => company.membershiplevel >= 3)
+
+        excludeCompanies =  myRandomInts(3, 5)
+        console.log(excludeCompanies)
+        html = companiesFiltered.map(company => 
+        // Excluding the companies randomly selected  
+                company != companiesFiltered[excludeCompanies[0]]
+            && company != companiesFiltered[excludeCompanies[1]]
+            && company != companiesFiltered[excludeCompanies[2]]
+        // Formatting the 3 randomly selected company as html
+            ? `
+            <div class="spotlight">
+                <h2>${company.name}</h2>
+                <div class="images">
+                    <img src="${company.imageurl}" alt="${company.name}" loading="lazy">
+                </div>
+                <h4>${company.industry}</h4>
+                <hr>
+                <p>${company.address}</p>
+                <p><a href="${company.websiteurl}" target="_blank"> ${company.websiteurl}</a></p>
+            </div>
+            `
+
+        : ""
+        ).join("")
+
+        // Displaying the HTML Companies 
+        displayspotlight.innerHTML += html
+    }
+
+    displayCompanies(data)
+}
+
+function myRandomInts(quantity, max){
+    const set = new Set()
+    while(set.size < quantity) {
+      set.add(Math.floor(Math.random() * max))
+    }
+    return [...set]
+  }
+
