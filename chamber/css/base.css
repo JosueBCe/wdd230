@@ -40,7 +40,7 @@ header {
     grid-row: 4/4;
 }
 
-i {
+i,button {
     cursor: pointer;
 }
 
@@ -48,10 +48,6 @@ i {
     padding-left: .5em;
     font-size: .7em;
 
-}
-
-button {
-    cursor: pointer;
 }
 
 #myDIV i {
@@ -256,11 +252,8 @@ p {
     font-size: 11px;
 }
 
-#more-info {
-    color: var(--distintive-color);
-}
 
-.spotlight a {
+.spotlight a,#more-info {
     border: solid 1px var(--constrast-backgr-main);
     border-radius: .3rem;
     color: var(--constrast-backgr-subh);
