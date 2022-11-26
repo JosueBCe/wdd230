@@ -78,6 +78,7 @@ if ("IntersectionObserver" in window) {
 if (titl == "Thank You") {
 
     const lastPageVisited = document.referrer.slice(-12);
+    console.log(lastPageVisited)
     if (lastPageVisited == "contact.html" || lastPageVisited == "d+my+Message") {
         document.getElementById("success-msg").innerHTML = "Message Successfully Sent!"
         document.getElementById("message").innerHTML = "Thanks for your Message"
