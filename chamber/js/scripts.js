@@ -1,10 +1,10 @@
 
 
 // FUNCTION THAT ALLOWS TO TOGGLE THE NAV BAR 
-let btn = document.getElementById("hamburgerBtn")
+let btn = document.getElementById("hamburger-btn")
 btn.onclick = () => toggleMenu()
 toggleMenu = () => {
-    document.getElementById("primaryNav").classList.toggle("open");
+    document.getElementById("primary-nav").classList.toggle("open");
     btn.classList.toggle("open");
 }
 
@@ -43,14 +43,14 @@ let day = d.getDay()
 
 function display() {
     if (day != 1 && day != 2) {
-        document.getElementById("myDIV").style.display = "none"
+        document.getElementById("meeting-message").style.display = "none"
     }
 }
 display()
 
 // Close the meeting message when the user clicks
 function myFunction() {
-    document.getElementById("myDIV").style.display = "none";
+    document.getElementById("meeting-message").style.display = "none";
 }
 
 // LOADING IMAGES (LAZY LOADING) and replacing placeholder with images. 

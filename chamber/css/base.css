@@ -26,7 +26,7 @@ header {
 
 }
 
-#myDIV {
+#meeting-message {
     background-color: var(--constrast-backgr-main);
     color: var(--backgr-main);
     z-index: 1;
@@ -40,17 +40,18 @@ header {
     grid-row: 4/4;
 }
 
-i,button {
+i,
+button {
     cursor: pointer;
 }
 
-#myDIV p {
+#meeting-message p {
     padding-left: .5em;
     font-size: .7em;
 
 }
 
-#myDIV i {
+#meeting-message i {
     width: 30px;
     height: 20px;
     align-self: center;
@@ -164,20 +165,20 @@ nav ul.open {
     transition: 1s;
 }
 
-#hamburgerBtn span:nth-child(1) {
+#hamburger-btn span:nth-child(1) {
     display: block;
 }
 
-#hamburgerBtn span:nth-child(2) {
+#hamburger-btn span:nth-child(2) {
     display: none;
 }
 
 
-#hamburgerBtn.open span:nth-child(1) {
+#hamburger-btn.open span:nth-child(1) {
     display: none;
 }
 
-#hamburgerBtn.open span:nth-child(2) {
+#hamburger-btn.open span:nth-child(2) {
     display: block;
 }
 
@@ -244,7 +245,7 @@ section,
 }
 
 p {
-    font-size: 12px;
+    font-size: 13px;
 }
 
 .spotlight p {
@@ -252,12 +253,12 @@ p {
 }
 
 
-.spotlight a,#more-info {
-    border: solid 1px var(--constrast-backgr-main);
+.spotlight a,
+#more-info {
     border-radius: .3rem;
     color: var(--constrast-backgr-subh);
     margin-right: 1rem;
-    padding: .2rem;
+    padding: 0;
 }
 
 section img,
@@ -284,6 +285,7 @@ section:nth-child(1) img {
     max-width: none;
     max-height: none;
     border-radius: 0.5rem;
+    object-fit: cover;
 }
 
 
@@ -471,7 +473,7 @@ form input {
 
 }
 
-.submitBtn {
+.submit-btn {
     width: 95%;
     margin: .5em;
     transition: 0.7s;
@@ -487,7 +489,7 @@ a {
     text-decoration: none;
 }
 
-.submitBtn:hover {
+.submit-btn:hover {
     width: 100%;
     transition: 0.7s;
     box-shadow: 1px 1px 1px black;

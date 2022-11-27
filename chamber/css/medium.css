@@ -25,7 +25,7 @@
         font-size: 1.5rem;
     }
 
-    #myDIV p {
+    #meeting-message p {
         font-size: .8em;
 
     }
@@ -41,7 +41,10 @@
         width: 100%;
         max-height: 100px;
     }
-
+    #more-info {
+        border: solid 2px var(--constrast-backgr-main);
+        margin: .3rem;
+    }
     section:nth-child(1) {
         grid-column: 1/4;
     }

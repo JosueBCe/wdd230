@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto+Mono:wght@300;400&display=swap"
         rel="stylesheet">
     <link rel="icon" href="/wdd230/chamber/favicon.ico">
-        <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="/wdd230/chamber/css/base.css">
     <link rel="stylesheet" href="/wdd230/chamber/css/medium.css">
     <link rel="stylesheet" href="/wdd230/chamber/css/large.css">
@@ -24,15 +24,15 @@
 
     <header>
         <div class="name">
-            <a href="index.html" > <img src="/wdd230/lesson3/images/logo.webp" alt="Chamber logo"></a>
-             <h1>Argentine Chamber of Commerce</h1>
-         </div>
+            <a href="index.html"> <img src="/wdd230/lesson3/images/logo.webp" alt="Chamber logo"></a>
+            <h1>Argentine Chamber of Commerce</h1>
+        </div>
         <nav>
-            <ul id="primaryNav">
+            <ul id="primary-nav">
                 <li class="active"><a href="index.html">Home</a></li>
-                <li ><a href="discover.html">Discover</a></li>
-                <li ><a href="directory.html">Directory</a></li>
-                <li ><a href="join.html">Join</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
@@ -44,11 +44,11 @@
             <a href="https://www.linkedin.com/in/josuebcenturion/" target="_blank"><img
                     src="/wdd230/chamber/images/linkedin.png" alt="Linkedin icon"></a>
         </div>
-        <div class="btn"> <button id="hamburgerBtn"><span>&#9776;</span><span>x</span></button></div>
+        <div class="btn"> <button id="hamburger-btn"><span>&#9776;</span><span>x</span></button></div>
         <div class="current-date">
             <p><span id="banner">Welcome, Thank you for visiting Us!<span class="visits"></span></span></p>
         </div>
-        <div id="myDIV">
+        <div id="meeting-message">
             <p>🤝🏼 Come join us for the chamber meet and greet Wednesday at 7:00 p.m.</p>
             <i onclick="myFunction()">❌</i>
         </div>
@@ -65,40 +65,41 @@
 
                 <source media="(min-width: 64em)" srcset="/wdd230/chamber/images/large.webp">
                 <source media="(min-width: 32em)" srcset="/wdd230/chamber/images/medium.webp">
-                <img src="/wdd230/chamber/images/small.webp" alt="Hero Image">
+                <img src="/wdd230/images/hero-image.jpg" alt="Hero Image">
             </picture>
         </section>
         <section>
             <h2>Ribbon Cutting</h2>
             <h3>The diamond Shack 💎</h3>
             <p>Join us for the grand opening of The Diamond Shack, Thursday at 1:00PM</p>
-            <a href="contact.html#contact-form" id="more-info"><p>more info...</p></a>
+            <a href="contact.html#contact-form" id="more-info">
+                <p>more info...</p>
+            </a>
         </section>
         <section class="weather-section">
             <!-- Keeps Placeholders for the Weather Information -->
             <h2>Weather</h2>
             <div class="weather">
-                <img src="/wdd230/chamber/images/weather-icon.webp" alt="Weather Icon Image" id="weatherImg">
-                <div class="temp"><span id="myTemp">40</span>ºF</div>
+                <img id="weather-img">
+                <div class="temp"><span id="my-temp"></span></div>
             </div>
-            <h4 id="weatherDescrip">CLEAR SKY</h4>
-            <p>Wind Speed: <span id="myWind">3.5</span>km/h</p>
-            <p>Wind Chill: <span id="windChill"></span></p>
+            <h4 id="weather-descrip"></h4>
+            <p>Wind Speed: <span id="my-wind"></span></p>
+            <p>Wind Chill: <span id="wind-chill"></span></p>
             <p>Humidity: <span id="humidity"></span></p>
         </section>
         <section>
             <h2>New Release</h2>
-            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                deserunt mollit anim id est laborum."</p>
+            <p>"Be part of our Chamber and discover the great benefits for small and medium businesses. We are releasing
+                a new program with additional training for the next business generation, e-commerce policies, and best
+                practices, to make your business grow and be an essential part of our collaborative community."</p>
         </section>
         <div id="spotlights">
-          
+
         </div>
         <section class="join-us">
-            <button class="btn-2" onclick="window.location.href='https://josuebce.github.io/wdd230/chamber/join.html';">Join Us! </button>
+            <button class="btn-2"
+                onclick="window.location.href='https://josuebce.github.io/wdd230/chamber/join.html';">Join Us! </button>
             <h5>Discover how to join the chamber of commerce and how it will benefit your organization!</h5>
         </section>
     </main>
@@ -110,13 +111,17 @@
                 </div>
                 <div class="footer-info">
                     <p><strong> Argentine Chamber of Commerce </strong></p>
-                    <a href="contact.html#contact-form"><p>info</p></a>
+                    <a href="contact.html#contact-form">
+                        <p>info</p>
+                    </a>
                 </div>
             </div>
             <div class="footer-right">
                 <p>www.argchamber.org</p>
                 <p>+(54) 9 3624 000000</p>
-                <a href="contact.html#maps"><p>📍 location Map </p></a>
+                <a href="contact.html#maps">
+                    <p>📍 location Map </p>
+                </a>
             </div>
         </div>
         <hr>

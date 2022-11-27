@@ -1,4 +1,4 @@
-let windChill = document.getElementById("windChill")
+let windChill = document.getElementById("wind-chill")
 
 
 
@@ -42,14 +42,17 @@ function displayResults(weatherData, temp, wind) {
     const iconsrc = `https://openweathermap.org/img/w/${weatherData.weather[0].icon}.png`;
     const desc = weatherData.weather[0].description.toUpperCase();
     const humidity = weatherData.main.humidity
-
+    
+    
+    
+    
     // Displaying the Weather information
-    document.getElementById("weatherDescrip").textContent = desc
-    document.getElementById("weatherImg").src = iconsrc
-    document.getElementById("weatherImg").alt = desc
+    document.getElementById("weather-descrip").textContent = desc
+    document.getElementById("weather-img").src = iconsrc
+    document.getElementById("weather-img").alt = desc
     document.getElementById("humidity").innerHTML = `${humidity}%`
-    document.getElementById("myTemp").innerHTML = temp
-    document.getElementById("myWind").innerHTML = wind
+    document.getElementById("my-temp").innerHTML = temp
+    document.getElementById("my-wind").innerHTML = wind
 }   
 
 
