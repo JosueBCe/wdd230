@@ -262,3 +262,8 @@ td {
     padding:1em; 
 }
 
+.wireframe {
+    display: grid; 
+    justify-items: center;
+    margin: 2rem auto;
+}
