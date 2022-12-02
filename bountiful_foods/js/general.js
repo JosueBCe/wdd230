@@ -72,8 +72,10 @@ mainFresh()
 const displayOrder = (formValues) => {
 
     div = `<div class="order">
-    <h3>Order #${count}</h3>
+    <h3>Order #${count}</h3>  
+    <i onclick="cancelOrder(${count})">❌</i>
     <h4>Your Info.</h4>
+    
     `
     necessaryValues = [1,2, 3, 5, 6, 7]
     html = formValues.map((value, index) => necessaryValues.includes(index)
@@ -97,6 +99,7 @@ const nutrientsSection = (nutritions) => {
     <li> Protein: ${sumNutritions(nutritions, "protein").toFixed(2)}</li>
     <li> Sugar: ${sumNutritions(nutritions, "sugar").toFixed(2)}</li>
     </ul>
+  
     </div>
     `
     return nutrientSection
@@ -114,10 +117,11 @@ const displayOptions = (data) => {
     <option value="${fruit.name}"> ${fruit.name} </option>
     `
     ).join("")
-    selectDefault = '<option value="please"> Select One Option </option>'
+    selectDefault = '<option value=""> Select One Option </option>'
     return selectDefault + options
 }
 
+const cancelOrder = (orderNum) => document.querySelector(`.order:nth-child(${orderNum})`).style.display = "none"
 
 
 
