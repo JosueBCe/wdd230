@@ -465,14 +465,18 @@ img[data-src] {
     border-radius: .5em;
 }
 
-.main-join {
+.main-join,  .order, .orders  {
     margin: 1em auto;
     display: block;
-
+  
     padding: 0.5em;
     border-radius: .3em;
     transition: .5s;
     color: var(--backgr-main);
+}
+.order{
+    border: solid 2px var(--constrast-backgr-main);
+    padding: 1rem; 
 }
 
 .form-join {
@@ -503,7 +507,10 @@ form input {
 a {
     text-decoration: none;
 }
-
+.subtitle {
+    list-style: none;
+    margin: .5rem 0rem;
+}
 .submit-btn:hover {
     width: 90%;
     transition: 0.7s;

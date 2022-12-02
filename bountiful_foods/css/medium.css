@@ -177,9 +177,11 @@
     /* ============== JOIN PAGE ================ */
 
 
-    .main-join {
+    .main-join, .order, .orders  {
         box-shadow: 1px 5px 10px var(--backgr-main);
         padding: 1em;
+        margin: 1rem auto;
+        border: none
     }
 
     .main-join:hover {

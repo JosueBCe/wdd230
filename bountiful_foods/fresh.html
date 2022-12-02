@@ -9,47 +9,47 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto+Mono:wght@300;400&display=swap"
-    rel="stylesheet">
-<link rel="icon" href="/wdd230/lesson-12/favicon_bountiful_food.ico">
-<link rel="stylesheet" href="css/normalize.css">
-<link rel="stylesheet" href="/wdd230/bountiful_foods/css/base.css">
-<link rel="stylesheet" href="/wdd230/bountiful_foods/css/medium.css">
-<link rel="stylesheet" href="/wdd230/bountiful_foods/css/large.css">
-<title>Bountiful Foods</title>
+        rel="stylesheet">
+    <link rel="icon" href="/wdd230/lesson-12/favicon_bountiful_food.ico">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="/wdd230/bountiful_foods/css/base.css">
+    <link rel="stylesheet" href="/wdd230/bountiful_foods/css/medium.css">
+    <link rel="stylesheet" href="/wdd230/bountiful_foods/css/large.css">
+    <title>Bountiful Foods</title>
 
 </head>
 
 <body>
 
-<header>
-    <div class="name">
-        <a href="index.html"> <img src="/wdd230/lesson-12/images/logo.png" alt="Bountiful Foods logo"></a>
-        <h1>Bountiful Foods</h1>
-    </div>
-    <nav>
-        <ul id="primary-nav">
-            <li class="active"><a href="index.html">Home</a></li>
-            <li><a href="fresh.html">Fresh</a></li>
-            <li><a href="about.html">About Us</a></li>
-        </ul>
-    </nav>
-    <div class="icons">
-        <a href="https://www.facebook.com/" target="_blank"><img src="/wdd230/chamber/images/facebook.png"
-                alt="Facebook icon"></a>
-        <a href="https://www.instagram.com/" target="_blank"> <img src="/wdd230/chamber/images/instagram.png"
-                alt="Instagram icon"></a>
-        <a href="https://www.linkedin.com/in/josuebcenturion/" target="_blank"><img
-                src="/wdd230/chamber/images/linkedin.png" alt="Linkedin icon"></a>
-    </div>
-    <div class="btn"> <button id="hamburger-btn"><span>&#9776;</span><span>x</span></button></div>
-    <div class="current-date">
-        <p><span id="banner">Welcome, Thank you for visiting Us!<span class="visits"></span></span></p>
-    </div>
-    <div id="meeting-message">
-        <p>🤝🏼 Come join us for the chamber meet and greet Wednesday at 7:00 p.m.</p>
-        <i onclick="myFunction()">❌</i>
-    </div>
-</header>
+    <header>
+        <div class="name">
+            <a href="index.html"> <img src="/wdd230/lesson-12/images/logo.png" alt="Bountiful Foods logo"></a>
+            <h1>Bountiful Foods</h1>
+        </div>
+        <nav>
+            <ul id="primary-nav">
+                <li class="active"><a href="index.html">Home</a></li>
+                <li><a href="fresh.html">Fresh</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </nav>
+        <div class="icons">
+            <a href="https://www.facebook.com/" target="_blank"><img src="/wdd230/chamber/images/facebook.png"
+                    alt="Facebook icon"></a>
+            <a href="https://www.instagram.com/" target="_blank"> <img src="/wdd230/chamber/images/instagram.png"
+                    alt="Instagram icon"></a>
+            <a href="https://www.linkedin.com/in/josuebcenturion/" target="_blank"><img
+                    src="/wdd230/chamber/images/linkedin.png" alt="Linkedin icon"></a>
+        </div>
+        <div class="btn"> <button id="hamburger-btn"><span>&#9776;</span><span>x</span></button></div>
+        <div class="current-date">
+            <p><span id="banner">Welcome, Thank you for visiting Us!<span class="visits"></span></span></p>
+        </div>
+        <div id="meeting-message">
+            <p>🤝🏼 Come join us for the chamber meet and greet Wednesday at 7:00 p.m.</p>
+            <i onclick="myFunction()">❌</i>
+        </div>
+    </header>
     <!-- <div class="join-page">
         <div class="membership-div">
             <h2 class="heading-join">Membership Levels</h2>
@@ -86,52 +86,47 @@
 
             </ul>
         </div> -->
-        <main class="main-join">
-            <div class="heading-join">
-                <h2> Prepare your Mix </h2>
-            </div>
-            <div class="form-join">
-                <form method="get" id="order">
-                    <fieldset>
-                        <label class="top">First Name*<input autofocus type="text" name="fname" required></label>
-                        
-                        <label class="top">Email*<input type="email" name="email" required placeholder="mypersonal@email.com"></label>
-                            <label class="top">Phone*<input type="tel" name="phone" required></label>
-                        <!-- <label class="top"> Business Name/Title<input type="text" name="businessname" required></label>
+    <main class="main-join">
+        <div class="heading-join">
+            <h2> Prepare your Mix </h2>
+        </div>
+        <div class="form-join">
+            <form method="get" id="order">
+                <fieldset>
+                    <label class="top">First Name*<input autofocus type="text" name="fname" required></label>
+
+                    <label class="top">Email*<input type="email" name="email" required
+                            placeholder="mypersonal@email.com"></label>
+                    <label class="top">Phone*<input type="tel" name="phone" required></label>
+                    <!-- <label class="top"> Business Name/Title<input type="text" name="businessname" required></label>
                         <label class="top"> Business Position<input type="text" name="businessposition"
                                 pattern="[A-Za-z- ]{6,}"></label> -->
 
-                    </fieldset>
-                    <fieldset>
+                </fieldset>
+                <fieldset>
 
-                        <label class="top"> Prepare your Mix
-                            <select name="fruit-options-1" id="select-1" required>
-                                
-                            </select>
-                             <select name="fruit-options-2" id="select-2" required>
-                                
-                            </select>
-                            <select name="fruit-options-3" id="select-3" required>
-                                
-                            </select>
-                        </label>
-                        <label> Special Instruction (Optional) <textarea name="businessDescription" rows="4" cols="50">
+                    <label class="top"> Prepare your Mix
+                        <select name="fruit-options-1" id="select-1" required>
+
+                        </select>
+                        <select name="fruit-options-2" id="select-2" required>
+
+                        </select>
+                        <select name="fruit-options-3" id="select-3" required>
+
+                        </select>
+                    </label>
+                    <label> Special Instruction (Optional) <textarea name="businessDescription" rows="4" cols="50">
                 </textarea></label>
-                        <input type="hidden" name="date" id="date">
-                    </fieldset>
-                    <label><input type="submit" name="submitBtn" value="Send my Order" class="submit-btn"></label>
-                </form>
-            </div>
-            <div>
-            <ul id="submittedOrder">     </ul>
-                <div >
-                    <h4>Nutrional Info</h4>
-                    <ul id="nutrional-info" ></ul>
-                </div>
-            </ul>
+                    <input type="hidden" name="date" id="date">
+                </fieldset>
+                <label><input type="submit" name="submitBtn" value="Send my Order" class="submit-btn"></label>
+            </form>
         </div>
-        </main>
-
+   
+    </main>
+    <div class="orders">
+      
     </div>
 
     <footer>
