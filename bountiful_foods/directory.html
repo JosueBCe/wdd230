@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="This is the Directory Page of the Chamber of Commerce Website. This page display what companies are part of this organization and some ways to contact them and know more about them. Where the data is fechted from a JSON file with all Information about the companies in the Chamber">
+
+    <link rel="icon" href="/wdd230/chamber/favicon.ico">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="/wdd230/chamber/css/base.css">
+    <link rel="stylesheet" href="/wdd230/chamber/css/medium.css">
+    <link rel="stylesheet" href="/wdd230/chamber/css/large.css">
+    <title>Directory</title>
+    <script src="/wdd230/chamber/js/scripts.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+
+        <div class="name">
+            <a href="index.html"> <img src="/wdd230/lesson3/images/logo.webp" alt="Chamber logo"></a>
+            <h1>Argentine Chamber of Commerce</h1>
+        </div>
+        <nav>
+            <ul id="primary-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li class="active"><a href="#">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="icons">
+            <a href="https://www.facebook.com/" target="_blank"><img src="/wdd230/chamber/images/facebook.png"
+                    alt="Facebook icon"></a>
+            <a href="https://www.instagram.com/" target="_blank"> <img src="/wdd230/chamber/images/instagram.png"
+                    alt="Instagram icon"></a>
+            <a href="https://www.linkedin.com/in/josuebcenturion/" target="_blank"><img
+                    src="/wdd230/chamber/images/linkedin.png" alt="Linkedin icon"></a>
+        </div>
+        <div class="btn"> <button id="hamburger-btn"><span>&#9776;</span><span>x</span></button></div>
+        <div class="current-date">
+            <p><span id="banner">Welcome, Thank you for visiting Us! </span><span class="visits"></span></p>
+        </div>
+        <div id="meeting-message">
+            <p>🤝🏼 Come join us for the chamber meet and greet Wednesday at 7:00 p.m.</p>
+            <i onclick="myFunction()">❌</i>
+        </div>
+    </header>
+    <div id="main-discovery">
+        <div class="menu">
+            <h2>Business Directory</h2>
+            <div>
+                <img src="./images/grid-icon.png" id="grid-icon" alt="grid icon">
+                <img src="./images/list-icon.png" id="list" alt="list icon">
+            </div>
+        </div>
+        <div id="companies" class="grid">
+        </div>
+    </div>
+    <footer>
+        <div class="footer-main">
+            <div class="footer-left">
+                <div class="footer-image">
+                    <a href="index.html"><img src="/wdd230/lesson3/images/logo-red.webp" alt="Chamber logo"></a>
+                </div>
+                <div class="footer-info">
+                    <p><strong> Argentine Chamber of Commerce </strong></p>
+                    <a href="contact.html#contact-form">
+                        <p>info</p>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-right">
+                <p>www.argchamber.org</p>
+                <p>+(54) 9 3624 000000</p>
+                <a href="contact.html#maps">
+                    <p>📍 location Map </p>
+                </a>
+            </div>
+        </div>
+        <hr>
+        <div class="footer-sub">
+            <p>&copy;<span id="year"></span> Argentine Chamber |<strong> Josue Benjamin Centurion | </strong> WDD230
+                Project |
+            <p id="updated"></p>
+
+        </div>
+    </footer>
+</body>
+
+</html>

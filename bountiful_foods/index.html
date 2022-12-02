@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="This is the Chamber of Commerce Website. It's a project assignment for the WDD230 Course at BYU - Idaho. In this project is applied the principle of responsiveness, white spaces, good contrast, and consistency in design and layout. It contains multiple pages, utilizing HTML, CSS, and Javascript. ">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto+Mono:wght@300;400&display=swap"
+        rel="stylesheet">
+    <link rel="icon" href="/wdd230/lesson-12/favicon_bountiful_food.ico">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="/wdd230/bountiful_foods/css/base.css">
+    <link rel="stylesheet" href="/wdd230/bountiful_foods/css/medium.css">
+    <link rel="stylesheet" href="/wdd230/bountiful_foods/css/large.css">
+    <title>Bountiful Foods</title>
+
+</head>
+
+<body>
+
+    <header>
+        <div class="name">
+            <a href="index.html"> <img src="/wdd230/lesson-12/images/logo.png" alt="Bountiful Foods logo"></a>
+            <h1>Bountiful Foods</h1>
+        </div>
+        <nav>
+            <ul id="primary-nav">
+                <li class="active"><a href="index.html">Home</a></li>
+                <li><a href="fresh.html">Fresh</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </nav>
+        <div class="icons">
+            <a href="https://www.facebook.com/" target="_blank"><img src="/wdd230/chamber/images/facebook.png"
+                    alt="Facebook icon"></a>
+            <a href="https://www.instagram.com/" target="_blank"> <img src="/wdd230/chamber/images/instagram.png"
+                    alt="Instagram icon"></a>
+            <a href="https://www.linkedin.com/in/josuebcenturion/" target="_blank"><img
+                    src="/wdd230/chamber/images/linkedin.png" alt="Linkedin icon"></a>
+        </div>
+        <div class="btn"> <button id="hamburger-btn"><span>&#9776;</span><span>x</span></button></div>
+        <div class="current-date">
+            <p><span id="banner">Welcome, Thank you for visiting Us!<span class="visits"></span></span></p>
+        </div>
+        <div id="meeting-message">
+            <p>🤝🏼 Come join us for the chamber meet and greet Wednesday at 7:00 p.m.</p>
+            <i onclick="myFunction()">❌</i>
+        </div>
+    </header>
+    <main>
+        <section class="hero-section">
+            <div class="welcome-message">
+                <h2>Welcome, We're Bountiful Foods </h2>
+            </div>
+            <div class="join-btn"
+                onclick="window.location.href='https://josuebce.github.io/wdd230/chamber/fresh.html';">
+                <h2>Make your Drink Mix</h2>
+            </div>
+            <picture>
+
+                <source media="(min-width: 64em)" srcset="/wdd230/lesson-12/images/hero.jpg">
+                <source media="(min-width: 32em)" srcset="/wdd230/lesson-12/images/hero.jpg">
+                <img src="/wdd230/lesson-12/images/hero.jpg" alt="Hero Image">
+            </picture>
+        </section>
+        <div id="spotlights">
+
+        </div>
+        <section class="company-info-section">
+
+            <div class="company-info-paragraph">
+                <h2>lorem ipsum dolor sit</h2>
+                <p>orem ipsum dolor sit amet consectetur
+                    Ornare metus accumsan integer fermentum justo blandit conubia molestie duis torquent pharetra
+                    lobortis dictum, eleifend primis donec euismod cursus diam ultricies rutrum tortor cum posuere
+                    pulvinar. Ut euismod quis pra
+                    orem ipsum dolor sit amet consectetur
+                    Ornare metus accumsan integer fermentum justo blandit.
+                </p>
+            </div>
+            <picture>
+
+                <source media="(min-width: 64em)" srcset="/wdd230/lesson-12/images/company_image.jpg">
+                <source media="(min-width: 32em)" srcset="/wdd230/lesson-12/images/company_image.jpg">
+                <img src="/wdd230/lesson-12/images/company_image.jpg" alt="Hero Image">
+            </picture>
+        </section>
+        <section class="weather-section">
+            <!-- Keeps Placeholders for the Weather Information -->
+            <h2>Weather</h2>
+            <div class="weather">
+                <img id="weather-img">
+                <div class="temp"><span id="my-temp"></span></div>
+            </div>
+            <h4 id="weather-descrip"></h4>
+            <p>Wind Speed: <span id="my-wind"></span></p>
+            <p>Wind Chill: <span id="wind-chill"></span></p>
+            <p>Humidity: <span id="humidity"></span></p>
+            <div id="forecast">
+                
+            </div>
+        </section>
+        <section class="weather-section">
+            <!-- Keeps Placeholders for the Weather Information -->
+            <h2>Weather</h2>
+            <div class="weather">
+                <img id="weather-img">
+                <div class="temp"><span id="my-temp"></span></div>
+            </div>
+            <h4 id="weather-descrip"></h4>
+            <p>Wind Speed: <span id="my-wind"></span></p>
+            <p>Wind Chill: <span id="wind-chill"></span></p>
+            <p>Humidity: <span id="humidity"></span></p>
+        </section>
+
+
+    </main>
+    <footer>
+        <div class="footer-main">
+            <div class="footer-left">
+                <div class="footer-image">
+                    <a href="index.html"><img src="/wdd230/lesson-12/images/logo-footer.png" alt="Chamber logo"></a>
+                </div>
+                <div class="footer-info">
+                    <p><strong> Argentine Chamber of Commerce </strong></p>
+                    <a href="contact.html#contact-form">
+                        <p>info</p>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-right">
+                <p>www.argchamber.org</p>
+                <p>+(54) 9 3624 000000</p>
+                <a href="contact.html#maps">
+                    <p>📍 location Map </p>
+                </a>
+            </div>
+        </div>
+        <hr>
+        <div class="footer-sub">
+            <p>&copy;<span id="year"></span> Argentine Chamber |<strong> Josue Benjamin Centurion | </strong> WDD230
+                Project |
+            <p id="updated"></p>
+
+            <p> || Weather data provided by <a href="https://openweathermap.org">OpenWeather</a>||</p>
+        </div>
+    </footer>
+    <script src="/wdd230/bountiful_foods/js/scripts.js"></script>
+    <script src="/wdd230/bountiful_foods/js/windchill.js"></script>
+</body>
+
+</html>

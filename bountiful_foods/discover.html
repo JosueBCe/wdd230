@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="This is the Chamber of Commerce Website. It's a project assignment for the WDD230 Course at BYU - Idaho. This is the second web page. On this page has been applied the principle of Lazy-loading, hover: effects, responsiveness, and data management with localStorage keys and values.  ">
+
+    <link rel="icon" href="/wdd230/chamber/favicon.ico">
+    <link rel="stylesheet" href="css/normalize.css">    
+    <link rel="stylesheet" href="/wdd230/chamber/css/base.css">
+    <link rel="stylesheet" href="/wdd230/chamber/css/medium.css">
+    <link rel="stylesheet" href="/wdd230/chamber/css/large.css"> 
+    <script src="/wdd230/chamber/js/scripts.js" defer></script>
+    <script src="/wdd230/chamber/js/general.js" defer></script>
+    <title>Discover</title>
+</head>
+
+<body>
+    <header>
+
+        <div class="name">
+            <a href="index.html" > <img src="/wdd230/lesson3/images/logo.webp" alt="Chamber logo"></a>
+             <h1>Argentine Chamber of Commerce</h1>
+         </div>
+        <nav>
+            <ul id="primary-nav">
+                <li ><a href="index.html">Home</a></li>
+                <li class="active"><a href="discover.html">Discover</a></li>
+                <li ><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="icons">
+            <a href="https://www.facebook.com/" target="_blank"><img src="/wdd230/chamber/images/facebook.png"
+                    alt="Facebook icon"></a>
+            <a href="https://www.instagram.com/" target="_blank"> <img src="/wdd230/chamber/images/instagram.png"
+                    alt="Instagram icon"></a>
+            <a href="https://www.linkedin.com/in/josuebcenturion/" target="_blank"><img
+                    src="/wdd230/chamber/images/linkedin.png" alt="Linkedin icon"></a>
+        </div>
+        <div class="btn"> <button id="hamburger-btn"><span>&#9776;</span><span>x</span></button></div>
+        <div class="current-date">
+            <span id="banner">Welcome, Thank you for visiting Us! </span>
+        </div>
+        <div id="meeting-message">
+            <p>🤝🏼 Come join us for the chamber meet and greet Wednesday at 7:00 p.m.</p>
+            <i onclick="myFunction()">❌</i>
+        </div>
+    </header>
+    <div class="heading-discover">
+        
+        <h1>Discover Who We Are </h1>
+        <hr>
+        <div>
+            <p><span class="visits">Welcome, Thank you for visiting Us!</span></p>
+        </div>
+    </div>
+    <main class="main-discover">
+        <div class="building">
+            <picture> <img class="discover-img" src="./images/placeholder.webp"
+                    data-src="./images/rosario-chamber-of-commerce.webp" alt="Rosario Chamber of Commerce "></picture>
+            <div>
+                <p>The <strong> Rosario Chamber of Commerce </strong> is one of the most recognized assocations in this field in Argentina.
+                    His
+                    mission is to:</p>
+                <ul>
+                    <li>Generate, promote and support strategic projects that contribute to the economic development of
+                        their region of belonging.</li>
+                    <li>Provide Quality Analysis and Certification services on basic products, derivatives and inputs.
+                    </li>
+                    <li>Promote and offer the business community an efficient arbitration regime as a means of dispute
+                        resolution.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="building">
+            <picture> <img class="discover-img" src="./images/placeholder.webp"
+                    data-src="./images/salta-chamber-of-commerce.webp" alt="Salta Chamber of Commerce"></picture>
+            <div>
+                <p><strong>​The Chamber of Commerce and Industry of the Province of Salta </strong>is a second-tier non-profit business
+                    association that works to defend the interests of the represented sectors. His purpose is to:
+                <ul>
+                    <li>Meet objectives of common good linked to the economic, social, educational and cultural
+                        development
+                        of society and promote social assistance works.</li>
+                    <li>Generate the necessary own resources to develop the programmed activities and achieve economic
+                        solidity.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="building">
+            <picture> <img class="discover-img" src="./images/placeholder.webp"
+                    data-src="./images/chaco-chamber-of-commerce.webp" alt="Chaco Chamber of Commerce"></picture>
+
+            <div>
+                <p>
+                    <strong>The Chamber of Commerce of the Chaco </strong>is the most important in all of Northeast Argentina. His
+                    mission is
+                    to:</p>
+                <ul>
+                    <li>
+                        Represent, defend and promote the rights and interests of those represented in terms of an
+                        egalitarian participatory democracy.</li>
+                    <li>Act as a consultation and collaboration institution for the diagnosis, preparation and
+                        evaluation of
+                        public policies applied to our sector.</li>
+                    <li>Promote and defend local economic and social development, through solidarity,
+                        professionalization
+                        and the preparation of legislative projects.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="building">
+            <picture> <img class="discover-img" src="./images/placeholder.webp"
+                    data-src="./images/buenos-aires-stock-exchange.webp" alt="Buenos Aires Stock Exchange"></picture>
+
+            <div>
+                <p> <strong>The Buenos Aires Stock Exchange </strong> is the organization responsible for the operation of Argentina's
+                    primary
+                    stock exchange located at Buenos Aires CBD. It's affiliated to the Chambers' of commerce assocation
+                </p>
+                <ul>
+                    <li>It remains at the forefront of regulatory updating, promoting transparency and protection of the
+                        investing public, thus managing to compete efficiently with the Stock Exchanges of the region
+                        and
+                        the rest of the world.</li>
+                    <li>
+                        The multiple cooperation agreements entered into over the years with foreign exchanges imply
+                        recognition by international markets of the constant work in the task of dissemination, training
+                        and
+                        education in capital markets.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="building">
+
+            <picture> <img class="discover-img" src="./images/placeholder.webp"
+                    data-src="./images/buenos-aires-chamber-of-commerce.webp" alt="Buenos Aires Chamber of Commerce">
+            </picture>
+
+            <div>
+                <p><strong>The Argentine Chamber of Commerce</strong> is the main one in the sector. It has also been a pioneer in
+                    implementing conciliation and arbitration
+                    services, promoting collaboration between small and medium-sized companies. His vision is to:</p>
+                <ul>
+                    <li>To be leaders in the markets for grains, livestock products and by-products in which we operate,
+                        and
+                        national and international benchmarks for Argentine derivatives.</li>
+                    <li>
+                        To be a capital market that facilitates the financing of companies in the region and that
+                        channels
+                        local and other investments.</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-main">
+            <div class="footer-left">
+                <div class="footer-image">
+                    <a href="index.html"><img src="/wdd230/lesson3/images/logo-red.webp" alt="Chamber logo"></a>
+                </div>
+                <div class="footer-info">
+                    <p><strong> Argentine Chamber of Commerce </strong></p>
+                    <p>info</p>
+                </div>
+            </div>
+            <div class="footer-right">
+                <p>www.argchamber.org</p>
+                <p>+(54) 9 3624 000000</p>
+                <a href="contact.html#maps"><p>📍 location Map </p></a>
+            </div>
+        </div>
+        <hr>
+        <div class="footer-sub">
+            <p>&copy;<span id="year"></span> Argentine Chamber |<strong> Josue Benjamin Centurion | </strong> WDD230
+                Project |
+            <p id="updated"></p>
+
+
+        </div>
+    </footer>
+</body>
+
+</html>
