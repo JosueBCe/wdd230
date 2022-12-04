@@ -465,16 +465,15 @@ img[data-src] {
     border-radius: .5em;
 }
 
-.main-join,  .order, .orders  {
+.main-join,  .orders div, .orders  {
     margin: 1em auto;
     display: block;
-  
     padding: 0.5em;
     border-radius: .3em;
     transition: .5s;
     color: var(--backgr-main);
 }
-.order{
+.orders div {
     border: solid 2px var(--constrast-backgr-main);
     padding: 1rem; 
 }

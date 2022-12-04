@@ -7,18 +7,20 @@ let dateSubmitted = document.querySelector("#date")
 // Hide the orders section at the beginning 
 document.querySelector(".orders").style.display = "none"
 
-let count = 0
-const url = "https://brotherblazzard.github.io/canvas-content/fruit.json";
-const form = document.getElementById('order');
 
+const url = "/wdd230/bountiful_foods/data/data.json";
+const form = document.getElementById('order');
+let numOrder = document.querySelector(".orders").childElementCount 
 // Adapting Local Storage to be able to store list or arrays
-Storage.prototype.setObj = function(key, obj) {
+Storage.prototype.setObj = function (key, obj) {
     return this.setItem(key, JSON.stringify(obj))
 }
-Storage.prototype.getObj = function(key) {
+Storage.prototype.getObj = function (key) {
     return JSON.parse(this.getItem(key))
 }
 
+orderFruits = []
+let allOrders = document.querySelectorAll(".orders h3")
 async function mainFresh() {
     try {
         //Fetch the Data from the API 
@@ -27,7 +29,7 @@ async function mainFresh() {
 
             // Make the data in json form
             const data = await response.json()
-            console.log(data)
+            
 
             // Adding options distrubuited between the 3 select options HTML elements
             document.getElementById("select-1").innerHTML = displayOptions(data.slice(0, 13))
@@ -42,13 +44,24 @@ async function mainFresh() {
                 let inputs = Array.from(form.elements)
                 const values = inputs.map(e => e.value)
 
-                console.log(values)
-                localStorage.set
+                // Gets the number of the orders
+                allOrders = document.querySelectorAll(".orders h3")                
+
+                // When a order is cancelled, the orders number is updated
+                allOrders.forEach((e, index) => { 
+                    e.innerText = `Order #${index + 1}`
+                    e.parentNode.className = `order-${index + 1}`
+                })
+                               
+                // Gets the amount of Orders
+                let numOrder = document.querySelector(".orders").childElementCount 
+
                 // Gets the fruits asked 
                 let askedFruits = values.slice(5, 8)
-             
-                count += 1
-                localStorage.setObj(`Order #${count}`, askedFruits)
+                orderFruits.push(askedFruits)
+
+                // Store in LS the orders in an array of arrays
+                localStorage.setObj(`Orders`, orderFruits)
                 let nutritions = []
                 data.map(e => askedFruits.includes(e.name) ? nutritions.push(e.nutritions) : e)
 
@@ -56,7 +69,7 @@ async function mainFresh() {
                 document.querySelector(".orders").style.display = "block"
 
                 // Shows One order with the user information and nutrients 
-                document.querySelector(".orders").innerHTML += displayOrder(values) + nutrientsSection(nutritions)
+                document.querySelector(".orders").innerHTML += displayOrder(values, numOrder) + nutrientsSection(nutritions)
             });
 
         } else {
@@ -69,20 +82,20 @@ async function mainFresh() {
 
 mainFresh()
 
-const displayOrder = (formValues) => {
+const displayOrder = (formValues, numOrder) => {
 
-    div = `<div class="order">
-    <h3>Order #${count}</h3>  
-    <i onclick="cancelOrder(${count})">❌</i>
+    div = `<div  class="order-${numOrder}">
+    <h3>Order #${numOrder}</h3>  
+    <i class="close" onclick="cancelOrder(${numOrder})">❌</i>
     <h4>Your Info.</h4>
     
     `
-    necessaryValues = [1,2, 3, 5, 6, 7]
+    necessaryValues = [1, 2, 3, 5, 6, 7]
     html = formValues.map((value, index) => necessaryValues.includes(index)
-        ? `<li>${value}</li>` :
-        index == 4 ? `<li class="subtitle"><strong>Ingridients of your mix
-        </strong></li> `
-            : ""
+        ? `<li>${value}</li>`
+        : index == 4 ? `<li class="subtitle"><strong>Ingridients of your mix </strong></li> `
+            : index == 8 ? `<li class="subtitle"><strong>Special Instructions:</strong><br> ${value}</li>`
+                : ""
     ).join("")
 
     return div + html
@@ -121,8 +134,17 @@ const displayOptions = (data) => {
     return selectDefault + options
 }
 
-const cancelOrder = (orderNum) => document.querySelector(`.order:nth-child(${orderNum})`).style.display = "none"
-
+const cancelOrder = (orderNum) => {
+    document.querySelector(`.order-${orderNum}`).remove()
+    ordersLocalStrg = localStorage.getObj(`Orders`)
+    console.log(ordersLocalStrg)
+    if (numOrder == 1) {
+        numOrder = 0
+    }
+    console.log(numOrder)
+    console.log(ordersLocalStrg.splice(numOrder, 1))
+    localStorage.setObj(`Orders`,ordersLocalStrg)
+}
 
 
 let imagesToLoad = document.querySelectorAll("img[data-src]");
