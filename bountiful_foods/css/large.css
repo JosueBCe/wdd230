@@ -76,7 +76,7 @@
         align-content: center;
     }
 
-    section:nth-child(4) {
+    .weather-section {
         grid-row: 5/5;
         grid-column: 2/3;
         padding-top: 2em;
@@ -104,13 +104,17 @@
 
     }
 
-    section:nth-child(5) {
+    section:nth-child(4) {
         display: grid;
         grid-row: 5/5;
         grid-column: 1/2;
     }
 
-    section,
+    .orders-card {        
+    grid-row: 5/5;
+
+    }
+    section,.weather-section
     #spotlights {
         min-height: 225px;
     }
@@ -118,6 +122,8 @@
     #forecast div {
         padding: 1rem 2rem;
     }
+
+
     .company-info-paragraph {
         left: 15%;
          width: 170px;

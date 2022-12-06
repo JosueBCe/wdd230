@@ -3,7 +3,6 @@ let windChill = document.getElementById("wind-chill")
 // select HTML elements in the document
 
 const url = "https://api.openweathermap.org/data/3.0/onecall?lat=33.1580&lon=-117.3505&appid=f4bc1306c8c0bda6307d0dc8941437a4&units=imperial&exclude=minutely,hourly";
-
 async function weaterMain() {
     try {
         //Fetch the Data from the API 
@@ -16,16 +15,18 @@ async function weaterMain() {
             // Get the wind speed and temperature of the current place
             const windSpeed = data.current.wind_speed
 
+            // Obtaining forecast data
             const forecastData = data.daily
 
-            console.log(data.daily.slice(0, 3).map(e => e.temp.min))
-          
+            // Obtaining Temperature
             const temp = data.current.temp.toFixed(0)
+            
+            // Calculating Wind Chill
             let windChill = tempConversor(temp, windSpeed)
+
             // Displaying the Weather information
             document.querySelector(".current-weather").innerHTML = displayResults(data.current, temp, windSpeed, windChill);
             document.getElementById("forecast").innerHTML += forecastWeather(forecastData)
-            // Calls the tempConversor Function, Calculates the Wind Chill and Display
             
 
         } else {
@@ -103,19 +104,20 @@ const ordersCard = () => {
         console.log(key, value)
         fruits = value.replace(/[\[\]'"]/g, '').split(",")
         orderHtml = fruits.map((fruit, index) =>
-            index == 0 ?
-                `
+            index == 0 ?`
         <div class="ordered-fruit" id="${key}">
-        <div  class="order-subtitle">
-            <h4>${key}</h4>
-            <i onclick="cancelOrderMain('${key}')">❌</i>
-                </div>
-            <p>${fruit}</p>` :
-                index == 2 ?
-                    `<p>${fruit}</p>
+            <div  class="order-subtitle">
+                <h4>${key}</h4>
+                <i onclick="cancelOrderMain('${key}')">❌</i>
+            </div>
+             <p>${fruit}</p>`
+            :
+            index == 2 ?
+            `<p>${fruit}</p>
         </div>`
-                    : `<p>${fruit}</p>`)
-            .join("")
+        :
+        `<p>${fruit}</p>`)
+        .join("")
 
 
 
@@ -156,10 +158,6 @@ const outputInHtml = (processedData) => {
             </a>
         </div>
         `
-        // <div class="images">
-        //         <img src="${company.imageurl}" alt="${company.name}" loading="lazy">
-        //     </div>
-
     ).join("")
 
     // Displaying the HTML Companies 
@@ -198,3 +196,50 @@ function myRandomInts(quantity, max) {
 
 
 
+const slides = document.querySelectorAll(".slide");
+
+// loop through slides and set each slides translateX
+slides.forEach((slide, indx) => {
+  slide.style.transform = `translateX(${indx * 100}%)`;
+});
+
+// select next slide button
+const nextSlide = document.querySelector(".btn-next");
+
+// current slide counter
+let curSlide = 0;
+// maximum number of slides
+let maxSlide = slides.length - 1;
+
+// add event listener and navigation functionality
+nextSlide.addEventListener("click", function () {
+  // check if current slide is the last and reset current slide
+  if (curSlide === maxSlide) {
+    curSlide = 0;
+  } else {
+    curSlide++;
+  }
+
+  //   move slide by -100%
+  slides.forEach((slide, indx) => {
+    slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
+  });
+});
+
+// select next slide button
+const prevSlide = document.querySelector(".btn-prev");
+
+// add event listener and navigation functionality
+prevSlide.addEventListener("click", function () {
+  // check if current slide is the first and reset current slide to last
+  if (curSlide === 0) {
+    curSlide = maxSlide;
+  } else {
+    curSlide--;
+  }
+
+  //   move slide by 100%
+  slides.forEach((slide, indx) => {
+    slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
+  });
+});

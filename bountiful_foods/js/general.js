@@ -4,7 +4,7 @@
 // Gets the date html element 
 let dateSubmitted = document.querySelector("#date")
 
-
+document.cookie = "witcher=Geralt; SameSite=None; Secure"
 
 
 // Hide the orders section at the beginning 
