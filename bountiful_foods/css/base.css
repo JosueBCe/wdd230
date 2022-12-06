@@ -68,7 +68,7 @@ button {
 
 .name img {
     margin: .2em;
-    border-radius: .6em;
+    border-radius: .3em;
     width: 50px;
     height: 50px;
 }
@@ -185,8 +185,6 @@ nav ul.open {
 
 main {
     display: grid;
-
-    grid-gap: .5em;
     margin: 2em auto;
 }
 
@@ -225,44 +223,51 @@ main {
 .join-btn, .company-info-paragraph {
     position: absolute;
     color: var(--backgr-main);
-    position: absolute;
     top: 70%;
     left: 50%;
     transform: translate(-50%, -50%);
     background: var(--constrast-backgr-main);
     border-radius: .7em;
     padding: .5rem ;
-    box-shadow: 1px 2px  4px 3px var(--distintive-color);
-
+    box-shadow: 0px 0px 10px 2px rgb(255, 210, 63);
     font-size: .6em;
     cursor: pointer;
 }
 
+.orders-card {
+    background: var(--constrast-backgr-main);
+    margin: 1rem;
+}
+
+#forecast {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+    margin: 1rem 2rem;
+}
+
 .company-info-paragraph {
-    left: 40%;
-    top: 50%;
+    left: 45%;
+    top: 20%;
     font-size: .9em;
-    max-width: 200px;
+    width: 235px;
 
 }
 section,
 #spotlights {
     background-color: var(--backgr-main);
-    border: solid 1px gray;
     margin: .3em .6em;
     color: white;
     text-align: center;
     align-items: center;
     padding: 0em .5em;
-    box-shadow: 0 0 1px var(--backgr-subheadings);
     border-radius: 0.5rem;
 }
 
 
 
 .weather-section {
-    background-color: var(--backgr-subheadings);
-    border: solid 7px var(--constrast-backgr-main);
+    background-color: white;
+    border: none;
 }
 
 p {
@@ -308,6 +313,13 @@ section:nth-child(1) img {
     border-radius: 0.5rem;
     object-fit: cover;
 }
+section:nth-child(3) { 
+    background-color: white;
+    border: none;
+    margin: 2rem 1rem;
+
+}
+
 
 #spotlights {
     grid-row: 2/3;
@@ -333,6 +345,44 @@ input {
 
 }
 
+#forecast  div, .current-weather {
+    box-shadow: 2px 3px 6px 5px var(--distintive-color);
+
+    padding: 0.5rem;
+    background: var(--backgr-main);
+    margin: 1rem .5rem;
+    border-radius: 0.5rem;
+}
+
+.weather-wind, .order-subtitle, .orders .order-subtitle {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.stored-orders {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+.orders-card  {
+    margin: 1rem;
+    overflow: hidden;
+
+}
+.orders-card img{
+    width: 95%;
+    max-height: none;
+    max-width: none;
+    margin: 1rem;
+    border-radius: .3rem;
+
+}
+
+#forecast h4 {
+    border-radius: .5rem;
+    color: var(--constrast-backgr-subh);
+}
+
 #windChillBtn {
     border-radius: .3em;
     background-color: var(--backgr-subheadings);
@@ -341,7 +391,7 @@ input {
     padding: .5em;
 }
 
-.spotlight {
+.spotlight, .ordered-fruit {
     background: var(--backgr-subheadings);
     border: solid 1px var(--backgr-main);
     margin: 0.5em 0.7em;
@@ -384,6 +434,8 @@ footer a {
     align-content: center;
     padding: 0 4.5em;
 }
+
+
 
 /* ====================== DISCOVER PAGE ==================== */
 
@@ -491,7 +543,7 @@ form input {
 
 }
 
-.submit-btn {
+.submit-btn, .orders-card h2 {
     width: 80%;
     margin: .5em;
     transition: 0.7s;

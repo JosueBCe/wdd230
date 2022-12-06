@@ -10,7 +10,8 @@ document.querySelector(".orders").style.display = "none"
 
 const url = "/wdd230/bountiful_foods/data/data.json";
 const form = document.getElementById('order');
-let numOrder = document.querySelector(".orders").childElementCount 
+
+
 // Adapting Local Storage to be able to store list or arrays
 Storage.prototype.setObj = function (key, obj) {
     return this.setItem(key, JSON.stringify(obj))
@@ -19,7 +20,7 @@ Storage.prototype.getObj = function (key) {
     return JSON.parse(this.getItem(key))
 }
 
-orderFruits = []
+
 let allOrders = document.querySelectorAll(".orders h3")
 async function mainFresh() {
     try {
@@ -29,7 +30,7 @@ async function mainFresh() {
 
             // Make the data in json form
             const data = await response.json()
-            
+
 
             // Adding options distrubuited between the 3 select options HTML elements
             document.getElementById("select-1").innerHTML = displayOptions(data.slice(0, 13))
@@ -38,30 +39,34 @@ async function mainFresh() {
 
 
             form.addEventListener('submit', (event) => {
+
                 // handle the form data and prevents of updating the page
                 event.preventDefault()
+
                 // Gets the values of the Submitted Form 
                 let inputs = Array.from(form.elements)
                 const values = inputs.map(e => e.value)
 
                 // Gets the number of the orders
-                allOrders = document.querySelectorAll(".orders h3")                
+                allOrders = document.querySelectorAll(".orders h3")
 
                 // When a order is cancelled, the orders number is updated
-                allOrders.forEach((e, index) => { 
-                    e.innerText = `Order #${index + 1}`
-                    e.parentNode.className = `order-${index + 1}`
-                })
-                               
+                // allOrders.forEach((e, index) => {
+                //     e.innerText = `Order #${index + 1}`
+                //     e.parentNode.className = `order-${index + 1}`
+                // })
+
                 // Gets the amount of Orders
-                let numOrder = document.querySelector(".orders").childElementCount 
+                let idOrder = Math.floor(Math.random() * 4000) + 1
 
                 // Gets the fruits asked 
                 let askedFruits = values.slice(5, 8)
-                orderFruits.push(askedFruits)
+                
 
                 // Store in LS the orders in an array of arrays
-                localStorage.setObj(`Orders`, orderFruits)
+                localStorage.setObj(`Order ${idOrder}`, askedFruits)
+
+                // Take the fruits nutritions to calculate the total amount 
                 let nutritions = []
                 data.map(e => askedFruits.includes(e.name) ? nutritions.push(e.nutritions) : e)
 
@@ -69,7 +74,8 @@ async function mainFresh() {
                 document.querySelector(".orders").style.display = "block"
 
                 // Shows One order with the user information and nutrients 
-                document.querySelector(".orders").innerHTML += displayOrder(values, numOrder) + nutrientsSection(nutritions)
+                document.querySelector(".orders").innerHTML += displayOrder(values, idOrder) + nutrientsSection(nutritions)
+            
             });
 
         } else {
@@ -82,11 +88,13 @@ async function mainFresh() {
 
 mainFresh()
 
-const displayOrder = (formValues, numOrder) => {
+const displayOrder = (formValues, idOrder) => {
 
-    div = `<div  class="order-${numOrder}">
-    <h3>Order #${numOrder}</h3>  
-    <i class="close" onclick="cancelOrder(${numOrder})">❌</i>
+    div = `<div  class="order-${idOrder}">
+    <div  class="order-subtitle">
+    <h3>Order #${idOrder}</h3>  
+    <i class="close" onclick="cancelOrder(${idOrder})">❌</i>
+    </div>
     <h4>Your Info.</h4>
     
     `
@@ -136,16 +144,8 @@ const displayOptions = (data) => {
 
 const cancelOrder = (orderNum) => {
     document.querySelector(`.order-${orderNum}`).remove()
-    ordersLocalStrg = localStorage.getObj(`Orders`)
-    console.log(ordersLocalStrg)
-    if (numOrder == 1) {
-        numOrder = 0
-    }
-    console.log(numOrder)
-    console.log(ordersLocalStrg.splice(numOrder, 1))
-    localStorage.setObj(`Orders`,ordersLocalStrg)
+    localStorage.removeItem(`Order ${orderNum}`)
 }
-
 
 let imagesToLoad = document.querySelectorAll("img[data-src]");
 
