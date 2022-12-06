@@ -10,22 +10,23 @@ async function weaterMain() {
         const response = await fetch(url);
         if (response.ok) {
 
-
-
             // Make the data in json form
             const data = await response.json();
-
+            
             // Get the wind speed and temperature of the current place
             const windSpeed = data.current.wind_speed
-            const forecastData = data.daily
-            console.log(data.daily.slice(0, 3).map(e => e.temp.min))
 
+            const forecastData = data.daily
+
+            console.log(data.daily.slice(0, 3).map(e => e.temp.min))
+          
             const temp = data.current.temp.toFixed(0)
+            let windChill = tempConversor(temp, windSpeed)
             // Displaying the Weather information
-            displayResults(data.current, temp, windSpeed);
-            forecastWeather(forecastData)
+            document.querySelector(".current-weather").innerHTML = displayResults(data.current, temp, windSpeed, windChill);
+            document.getElementById("forecast").innerHTML += forecastWeather(forecastData)
             // Calls the tempConversor Function, Calculates the Wind Chill and Display
-            windChill.innerHTML += tempConversor(temp, windSpeed)
+            
 
         } else {
             throw Error(await response.text());
@@ -51,22 +52,29 @@ const forecastWeather = (data) => {
     `)
     .join("")
 
-    document.getElementById("forecast").innerHTML += forecastHtml
+    return forecastHtml
 }
 
 
-function displayResults(weatherData, temp, wind) {
+function displayResults(weatherData, temp, wind, windChill) {
 
     const iconsrc = `https://openweathermap.org/img/w/${weatherData.weather[0].icon}.png`;
     const desc = weatherData.weather[0].description.toUpperCase();
     const humidity = weatherData.humidity
     // Displaying the Weather information
-    document.getElementById("weather-descrip").textContent = desc
-    document.getElementById("weather-img").src = iconsrc
-    document.getElementById("weather-img").alt = desc
-    document.getElementById("humidity").innerHTML = `${humidity}%`
-    document.getElementById("my-temp").innerHTML = temp
-    document.getElementById("my-wind").innerHTML = wind
+    html = `<h2> Current Weather</h2>
+    <div class="weather">
+        <img src="${iconsrc}" alt="${desc}">
+        <div class="temp">${temp}</div>
+    </div>
+    <h4 id="weather-descrip">${desc}</h4>
+    <div class="weather-wind">
+        <p>Wind Speed: ${wind}</p>
+        <p>Wind Chill: ${windChill}</p>
+    </div>
+    <p>Humidity: ${humidity}%</p>
+    `
+    return html
 }
 
 

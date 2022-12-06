@@ -4,11 +4,14 @@
 // Gets the date html element 
 let dateSubmitted = document.querySelector("#date")
 
+
+
+
 // Hide the orders section at the beginning 
 document.querySelector(".orders").style.display = "none"
 
 
-const url = "/wdd230/bountiful_foods/data/data.json";
+const url = "https://brotherblazzard.github.io/canvas-content/fruit.json";
 const form = document.getElementById('order');
 
 
@@ -59,9 +62,11 @@ async function mainFresh() {
                 // Gets the amount of Orders
                 let idOrder = Math.floor(Math.random() * 4000) + 1
 
+                // Today's date
+                let todaysDate = new Date().toLocaleDateString('en-us', { hour: "numeric", minute:"2-digit"});
+
                 // Gets the fruits asked 
                 let askedFruits = values.slice(5, 8)
-                
 
                 // Store in LS the orders in an array of arrays
                 localStorage.setObj(`Order ${idOrder}`, askedFruits)
@@ -72,9 +77,9 @@ async function mainFresh() {
 
                 // Show the orders section 
                 document.querySelector(".orders").style.display = "block"
-
+                console.log(values)
                 // Shows One order with the user information and nutrients 
-                document.querySelector(".orders").innerHTML += displayOrder(values, idOrder) + nutrientsSection(nutritions)
+                document.querySelector(".orders").innerHTML += displayOrder(values, idOrder) + nutrientsSection(nutritions) + `<p> Order Date: ${todaysDate} </p>`
             
             });
 
@@ -101,8 +106,8 @@ const displayOrder = (formValues, idOrder) => {
     necessaryValues = [1, 2, 3, 5, 6, 7]
     html = formValues.map((value, index) => necessaryValues.includes(index)
         ? `<li>${value}</li>`
-        : index == 4 ? `<li class="subtitle"><strong>Ingridients of your mix </strong></li> `
-            : index == 8 ? `<li class="subtitle"><strong>Special Instructions:</strong><br> ${value}</li>`
+        : index == 4 ? `<li class="subtitle"><strong>Mix's Ingridients</strong></li> `
+            : index == 8 && value.trim().length > 0 ? `<li class="subtitle"><strong>Special Instructions:</strong><br> <br> ${value}</li>`
                 : ""
     ).join("")
 
