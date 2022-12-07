@@ -1,5 +1,6 @@
 let windChill = document.getElementById("wind-chill")
 
+document.cookie = "witcher=Geralt; SameSite=None; Secure"
 // select HTML elements in the document
 
 const url = "https://api.openweathermap.org/data/3.0/onecall?lat=33.1580&lon=-117.3505&appid=f4bc1306c8c0bda6307d0dc8941437a4&units=imperial&exclude=minutely,hourly";

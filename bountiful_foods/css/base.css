@@ -529,7 +529,7 @@ img[data-src] {
 }
 .orders div {
     border: solid 2px var(--constrast-backgr-main);
-    padding: 1rem; 
+    padding: .7rem; 
 }
 
 .form-join {
