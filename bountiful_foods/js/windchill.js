@@ -101,8 +101,8 @@ storedOrders = document.querySelector(".stored-orders")
 
 const ordersCard = () => {
     for (let [key, value] of Object.entries(localStorage)) {
-
-        console.log(key, value)
+        console.log(value)
+        if (key.split(" ")[0] == "Order"){
         fruits = value.replace(/[\[\]'"]/g, '').split(",")
         orderHtml = fruits.map((fruit, index) =>
             index == 0 ?`
@@ -119,11 +119,9 @@ const ordersCard = () => {
         :
         `<p>${fruit}</p>`)
         .join("")
-
-
-
-        storedOrders.innerHTML += orderHtml
-
+        storedOrders.innerHTML += orderHtml    
+    }
+    
     }
 }
 
@@ -135,16 +133,23 @@ const cancelOrderMain = (key) => {
 
 }
 
-const outputInHtml = (processedData) => {
-    randomIndex = myRandomInts(1, 35)
+const fruitOptions = (processedData) => {
+    let randomIndex = myRandomInts(1, 35)
+    let emojiFruits =  "🌱​🌴​🍇​🍈​🍉​🍊​🍋​🍌​🍍​🥭​🍎​🍏​🍐​🍑​🍒​🍓​🥝​🍅​🥥​🥑​🍆​🥔​🥕​🌽​🌶️​🥒​🥬​🥦​🥙​🍨​🍧​🍦​🥤​🧃​🥂​🍹​🍺​🍸​🍷​🧁🌰​​"
+    let emojiExpression = "🤤​🤪​😜​😋​😁​😄​😊​🤗​🥵​👻​🙀​🙈​🙉​😸​🤩​😍​😘​🦧​👨‍💻​🤙​👌​✌️​😏​😎​🤓​😻​💯​🤳​🦾​💪🧡​🤠​😵‍💫​😮‍💨​👨​🧑‍🚀​🐷​🍾​​" 
+
+    let emojiFruitsDisplay = [...emojiFruits].filter((v, index) => v.length > 1).splice(randomIndex,4)
+    let emojiExpressDisplay = [...emojiExpression].filter((v, index) => v.length > 1).splice(randomIndex,4)
+
+
 
     options = processedData.splice(randomIndex, 4)
     // getting the companies data
-    html = options.map(fruit => `
+    html = options.map((fruit,index) => `
         <div class="spotlight">
-            <h2>${fruit.name}</h2>
+            <h2>${fruit.name} ${emojiFruitsDisplay[index]}</h2>
             
-            <h4>${fruit.family}</h4>
+            <h4>${fruit.family}  ${emojiExpressDisplay[index]}</h4>
             <hr>
            <a href="fresh.html">
             <button class="submit-btn">Prepare my Mix</button>
@@ -168,7 +173,7 @@ if (titl == "Bountiful Foods") {
             })
             .then(function (jsonObject) {
                 // Displays the Data in the HTML 
-                outputInHtml(jsonObject)
+                fruitOptions(jsonObject)
             });
     }
     displayCompanies(data)
