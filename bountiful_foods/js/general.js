@@ -1,19 +1,19 @@
 
-// let titl = document.title
 
-// Gets the date html element 
 let dateSubmitted = document.querySelector("#date")
 
-let ordersDiv = document.querySelector(".orders")
 // Hide the orders section at the beginning 
+let ordersDiv = document.querySelector(".orders")
 ordersDiv.style.display = "none"
 
 
 const url = "https://brotherblazzard.github.io/canvas-content/fruit.json";
+
+// Gets the form 
 const form = document.getElementById('order');
 
 
-// Adapting Local Storage to be able to store list or arrays
+// Adapting Local Storage to be able to store lists or arrays
 Storage.prototype.setObj = function (key, obj) {
     return this.setItem(key, JSON.stringify(obj))
 }
@@ -21,6 +21,7 @@ Storage.prototype.getObj = function (key) {
     return JSON.parse(this.getItem(key))
 }
 
+// Displaying the avaialable fruits to choose in the form
 const displayOptions = (data) => {
     options = data.map((fruit, index) => `
     <option value="${fruit.name}"> ${fruit.name} </option>
@@ -30,7 +31,6 @@ const displayOptions = (data) => {
     return selectDefault + options
 }
 
-let allOrders = document.querySelectorAll(".orders h3")
 async function mainFresh() {
     try {
         //Fetch the Data from the API 
@@ -56,17 +56,7 @@ async function mainFresh() {
                 let inputs = Array.from(form.elements)
                 const values = inputs.map(e => e.value)
 
-                // Gets the number of the orders
-                allOrders = document.querySelectorAll(".orders h3")
-
-                // When a order is cancelled, the orders number is updated
-                // allOrders.forEach((e, index) => {
-                //     e.innerText = `Order #${index + 1}`
-                //     e.parentNode.className = `order-${index + 1}`
-                // })
-            
-
-                // Gets the amount of Orders
+                // Generate a random Index for each order 
                 let idOrder = Math.floor(Math.random() * 4000) + 1
 
                 // Today's date
@@ -75,18 +65,18 @@ async function mainFresh() {
                 // Gets the fruits asked 
                 let askedFruits = values.slice(5, 8)
 
-                // Store in LS the orders in an array of arrays
+                // Store in LS the orders in an array
                 localStorage.setObj(`Order ${idOrder}`, askedFruits)
 
-                // Take the fruits nutritions to calculate the total amount 
+                // Take the fruits nutritions to calculate the total amount of each one
                 let nutritions = []
                 data.map(e => askedFruits.includes(e.name) ? nutritions.push(e.nutritions) : e)
 
-             
                 // Show the orders section 
                 ordersDiv.style.display = "grid"
-                console.log(values)
-                // Shows One order with the user information and nutrients 
+    
+
+                // Shows the order with the user information and nutrients 
                 ordersDiv.innerHTML += displayOrder(values, idOrder) + nutrientsSection(nutritions) + `<p> Order Date: ${todaysDate} </p>`
             
             });
@@ -101,6 +91,7 @@ async function mainFresh() {
 
 mainFresh()
 
+// Displays the submitted order as an order Ticket in the Orders Section 
 const displayOrder = (formValues, idOrder) => {
 
     div = `<div  class="order-${idOrder}">
@@ -109,25 +100,26 @@ const displayOrder = (formValues, idOrder) => {
     <i class="close" onclick="cancelOrder(${idOrder})">❌</i>
     </div>
     <h4>Your Info.</h4>
-    
     `
     necessaryValues = [1, 2, 3, 5, 6, 7]
     html = formValues.map((value, index) => necessaryValues.includes(index)
-        ? `<li>${value}</li>`
-        : index == 4 ? `<li class="subtitle"><strong>Mix's Ingridients</strong></li> `
-            : index == 8 && value.trim().length > 0 ? `<li class="subtitle"><strong>Special Instructions:</strong><br> <br> ${value}</li>`
+            ?               `<li>${value}</li>`
+            : index == 4 ? `<li class="subtitle"><strong>Mix's Ingridients</strong></li> `
+    : index == 8 && value.trim().length > 0 ? `<li class="subtitle"><strong>Special Instructions:</strong><br> <br> ${value}</li>`
                 : ""
     ).join("")
 
     return div + html
 }
 
-
+// Make appear the Orders Section only if there's a child (at least 1 order), otherwise just make disapear the Orders Section
 const updateLayout = (numOfChild) => 
 
 numOfChild == 1 ? document.querySelector(".orders").style.display = "none" :
 numOfChild >= 2 ? document.querySelector(".orders").style.display = "grid" : ""
 
+
+// Return a HTML Formatted Section of ther calculated nutritions Total amount.
 const nutrientsSection = (nutritions) => {
     nutrientSection = `
     <div>
@@ -145,6 +137,7 @@ const nutrientsSection = (nutritions) => {
     return nutrientSection
 }
 
+// Sum the same nutrients of different fruits and returns the total amount of them.
 const sumNutritions = (nutrients, nutrient) => {
     sum = nutrients.reduce(function (sum, current) {
         return sum + current[`${nutrient}`];
@@ -153,9 +146,8 @@ const sumNutritions = (nutrients, nutrient) => {
 }
 
 
-
+// Cancels and remove a order when it's clicked in the ❌
 const cancelOrder = (orderNum) => {
-
     document.querySelector(`.order-${orderNum}`).remove()
     localStorage.removeItem(`Order ${orderNum}`)
     let numOfChild = ordersDiv.childElementCount;
@@ -163,6 +155,7 @@ const cancelOrder = (orderNum) => {
     updateLayout(numOfChild)
 }
 
+// Applies lazy loading to images 
 let imagesToLoad = document.querySelectorAll("img[data-src]");
 
 const imgOptions = {
