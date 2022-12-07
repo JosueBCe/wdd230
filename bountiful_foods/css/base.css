@@ -223,13 +223,13 @@ main {
 .join-btn, .company-info-paragraph {
     position: absolute;
     color: var(--backgr-main);
-    top: 70%;
+    top: 85%;
     left: 50%;
     transform: translate(-50%, -50%);
     background: var(--constrast-backgr-main);
-    border-radius: .7em;
-    padding: .5rem ;
-    box-shadow: 0px 0px 10px 2px rgb(255, 210, 63);
+    border-radius: 0.4em;
+    width: 200px;
+    text-align: center;
     font-size: .6em;
     cursor: pointer;
 }
@@ -413,7 +413,7 @@ footer {
     display: block;
     text-align: center;
     background-color: var(--distintive-color);
-    color: white;
+    color: #003945;
     font-size: .8em;
     margin-top: 1.5em;
     padding-top: 1rem;
@@ -528,8 +528,11 @@ img[data-src] {
     transition: .5s;
     color: var(--backgr-main);
 }
+.main-join {
+    background-image: url(https://st2.depositphotos.com/7908382/11371/i/950/depositphotos_113716684-stock-photo-old-light-brown-wooden-fence.jpg)
+}
 .orders div {
-    border: solid 2px var(--constrast-backgr-main);
+    border: solid 3px var(--constrast-backgr-main);
     padding: .7rem; 
 }
 
@@ -581,7 +584,7 @@ textarea {
     margin: 1em auto;
     border-radius: .2em;
     font-size: 1em;
-    border: dotted 1px var(--backgr-subheadings);
+   
 }
 
 form label.top input:required {

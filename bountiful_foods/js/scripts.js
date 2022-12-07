@@ -11,9 +11,6 @@ toggleMenu = () => {
 
 
 
-document.cookie = "witcher=Geralt; SameSite=None; Secure"
-
-
 
 let title = document.title
 data = "data/data.json"
