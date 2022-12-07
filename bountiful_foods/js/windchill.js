@@ -126,21 +126,13 @@ const ordersCard = () => {
 
     }
 }
-const updateLayout = () => {
-    let ordersAmount = storedOrders.childElementCount
-    ordersCards = document.querySelector(".orders-card")
-    ordersImg = document.querySelector(".orders-card img")
-    ordersAmount == 3 ? ordersCards.style.maxHeight = "900px" :
-        ordersAmount == 0 ? (ordersCards.style.maxHeight = "450px", ordersImg.style.width = "90%", ordersCards.style.height = "fit-content")
-            : ordersCards.style.width = "fit-content"
 
-}
 
 
 const cancelOrderMain = (key) => {
     localStorage.removeItem(`${key}`)
     document.getElementById(`${key}`).remove()
-    updateLayout()
+
 }
 
 const outputInHtml = (processedData) => {
@@ -181,7 +173,7 @@ if (titl == "Bountiful Foods") {
     }
     displayCompanies(data)
     ordersCard()
-    updateLayout()
+
 }
 
 

@@ -4,9 +4,9 @@
 // Gets the date html element 
 let dateSubmitted = document.querySelector("#date")
 document.cookie = "witcher=Geralt; SameSite=None; Secure"
-
+let ordersDiv = document.querySelector(".orders")
 // Hide the orders section at the beginning 
-document.querySelector(".orders").style.display = "none"
+ordersDiv.style.display = "none"
 
 
 const url = "https://brotherblazzard.github.io/canvas-content/fruit.json";
@@ -21,6 +21,14 @@ Storage.prototype.getObj = function (key) {
     return JSON.parse(this.getItem(key))
 }
 
+const displayOptions = (data) => {
+    options = data.map((fruit, index) => `
+    <option value="${fruit.name}"> ${fruit.name} </option>
+    `
+    ).join("")
+    selectDefault = '<option value=""> Select One Option </option>'
+    return selectDefault + options
+}
 
 let allOrders = document.querySelectorAll(".orders h3")
 async function mainFresh() {
@@ -56,6 +64,7 @@ async function mainFresh() {
                 //     e.innerText = `Order #${index + 1}`
                 //     e.parentNode.className = `order-${index + 1}`
                 // })
+            
 
                 // Gets the amount of Orders
                 let idOrder = Math.floor(Math.random() * 4000) + 1
@@ -73,11 +82,12 @@ async function mainFresh() {
                 let nutritions = []
                 data.map(e => askedFruits.includes(e.name) ? nutritions.push(e.nutritions) : e)
 
+             
                 // Show the orders section 
-                document.querySelector(".orders").style.display = "block"
+                ordersDiv.style.display = "grid"
                 console.log(values)
                 // Shows One order with the user information and nutrients 
-                document.querySelector(".orders").innerHTML += displayOrder(values, idOrder) + nutrientsSection(nutritions) + `<p> Order Date: ${todaysDate} </p>`
+                ordersDiv.innerHTML += displayOrder(values, idOrder) + nutrientsSection(nutritions) + `<p> Order Date: ${todaysDate} </p>`
             
             });
 
@@ -112,6 +122,12 @@ const displayOrder = (formValues, idOrder) => {
     return div + html
 }
 
+
+const updateLayout = (numOfChild) => 
+
+numOfChild == 1 ? document.querySelector(".orders").style.display = "none" :
+numOfChild >= 2 ? document.querySelector(".orders").style.display = "grid" : ""
+
 const nutrientsSection = (nutritions) => {
     nutrientSection = `
     <div>
@@ -136,18 +152,15 @@ const sumNutritions = (nutrients, nutrient) => {
     return sum
 }
 
-const displayOptions = (data) => {
-    options = data.map((fruit, index) => `
-    <option value="${fruit.name}"> ${fruit.name} </option>
-    `
-    ).join("")
-    selectDefault = '<option value=""> Select One Option </option>'
-    return selectDefault + options
-}
+
 
 const cancelOrder = (orderNum) => {
+
     document.querySelector(`.order-${orderNum}`).remove()
     localStorage.removeItem(`Order ${orderNum}`)
+    let numOfChild = ordersDiv.childElementCount;
+    console.log(numOfChild)
+    updateLayout(numOfChild)
 }
 
 let imagesToLoad = document.querySelectorAll("img[data-src]");

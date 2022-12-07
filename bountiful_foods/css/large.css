@@ -103,6 +103,12 @@
         display: block;
 
     }
+    .slider, .slide {
+        height: 670px;
+    }
+    .slide img {
+        object-fit: none;
+    }
 
     section:nth-child(4) {
         display: grid;
@@ -112,8 +118,16 @@
 
     .orders-card {        
     grid-row: 5/5;
-
+    
     }
+    .orders {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    width: fit-content;
+    }
+    .orders h2 {
+        grid-column: span 2;
+      }
+
     section,.weather-section
     #spotlights {
         min-height: 225px;
