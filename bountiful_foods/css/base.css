@@ -26,6 +26,11 @@ header {
 
 }
 
+picture {
+   
+    justify-items: center;
+    margin: 1rem;
+}
 #meeting-message {
     background-color: var(--constrast-backgr-main);
     color: var(--backgr-main);
@@ -185,7 +190,7 @@ nav ul.open {
 
 main {
     display: grid;
-    margin: 2em auto;
+    margin: 0em auto;
 }
 
 .hero-section img, .slider img{
@@ -856,9 +861,9 @@ iframe {
   }
   
   .slide img {
-    width: 95%;
+    width: 100%;
     height: 100%;
-   
+  
     object-fit: cover;
   }
   
