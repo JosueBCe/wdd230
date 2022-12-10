@@ -193,7 +193,9 @@
         margin: 0 auto;
 
     }
-
+    .timeline {
+        grid-column: 1/3;
+    }
 
 
 }

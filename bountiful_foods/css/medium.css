@@ -243,5 +243,33 @@
         max-width: 480px;
 
     }
+    .container {
+        width: 50%;
+        padding-left: 35px;
+        padding-right: 45px;
+    
+    }
+    .timeline::after {
+        left: 50%;
+        }
+        /* Place the container to the left */
+  .left {
+    left: 0;
+  }
 
+  .right {
+    left: 50%;
+  }
+  .right::after {
+    left: -16px;
+  }
+.left::after {
+    left:auto;
+}
+  
+  
+  /* Place the container to the right */
+    .right::after {
+        left: -16px;
+      }
 }

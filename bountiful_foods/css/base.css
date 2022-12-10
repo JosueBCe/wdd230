@@ -494,7 +494,7 @@ img[data-src] {
 }
 
 .heading-join {
-
+    text-align: center;
     background-color: var(--constrast-backgr-main);
     box-shadow: 1px 1px 5px var(--constrast-backgr-main);
     color: white;
@@ -619,14 +619,18 @@ label.top {
 
 .thanks-div,
 .membership-div {
-    display: grid;
+    display: flex;
     text-align: center;
+    flex-direction: column;
     margin: 1.5em;
-    padding: 2em 1em;
-    border-radius: .5em;
+    padding: 1rem;
+    border-radius: 0.5em;
     box-shadow: 1px 5px 10px var(--distintive-color);
     color: var(--backgr-main);
     text-align: left;
+
+    align-items: center;
+
 }
 
 .membership-div {
@@ -744,4 +748,83 @@ iframe {
 .btn-next {
     top: 45%;
     right: 5%;
+}
+
+
+
+
+/* ===================== ABOUT PAGE ==================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 1.5rem auto;
+
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: var(--distintive-color);
+
+    bottom: 0;
+    left: 31px;
+    margin-left: -3px;
+    top: 100px;
+}
+
+
+
+.container {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+}
+
+.container::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: white;
+    border: 4px solid #FF9F55;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.left {
+    left: 0;
+}
+
+
+
+
+
+.content {
+    padding: 20px 30px;
+    background-color: var(--backgr-main);
+    position: relative;
+    border-radius: 6px;
+    color: var(--constrast-backgr-subh);
+
+}
+
+.right {
+    left: 0%;
+}
+
+.right::after,
+.left::after {
+    left: 15px;
 }
