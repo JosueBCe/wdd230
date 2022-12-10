@@ -536,7 +536,7 @@ form input {
 .submit-btn,
 .orders-card h2 {
     width: 80%;
-    margin: .5em;
+
     transition: 0.7s;
     color: white;
     border: solid 1px var(--backgr-main);
@@ -544,7 +544,8 @@ form input {
     border-radius: .3em;
     background-color: var(--constrast-backgr-main);
     text-decoration: none;
-    justify-self: center;
+
+        margin: 0.5rem auto;
 }
 
 .orders-card h2 {
@@ -755,9 +756,6 @@ iframe {
 
 /* ===================== ABOUT PAGE ==================================== */
 
-* {
-    box-sizing: border-box;
-}
 
 
 .timeline {
@@ -805,6 +803,7 @@ iframe {
 
 .left {
     left: 0;
+    box-sizing: border-box;
 }
 
 
@@ -822,6 +821,7 @@ iframe {
 
 .right {
     left: 0%;
+    box-sizing: border-box;
 }
 
 .right::after,
