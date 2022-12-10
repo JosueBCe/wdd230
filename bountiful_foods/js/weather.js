@@ -116,7 +116,8 @@ const ordersCard = () => {
                 <h4>${key}</h4>
                 <i onclick="cancelOrderMain('${key}')">❌</i>
             </div>
-             <p>${fruit}</p>`
+            
+            <p>${fruit}</p>`
                     : index == 2 ?
                         `<p>${fruit}</p>
         </div>`
