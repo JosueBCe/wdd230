@@ -27,8 +27,8 @@ const displayOptions = (data) => {
     <option value="${fruit.name}"> ${fruit.name} </option>
     `
     ).join("")
-    selectDefault = '<option value=""> Select One Option </option>'
-    return selectDefault + options
+
+    return options
 }
 
 async function mainFresh() {
@@ -42,9 +42,9 @@ async function mainFresh() {
 
 
             // Adding options distrubuited between the 3 select options HTML elements
-            document.getElementById("select-1").innerHTML = displayOptions(data.slice(0, 13))
-            document.getElementById("select-2").innerHTML = displayOptions(data.slice(13, 27))
-            document.getElementById("select-3").innerHTML = displayOptions(data.slice(27, 39))
+            document.getElementById("select-1").innerHTML += displayOptions(data.slice(0, 13))
+            document.getElementById("select-2").innerHTML += displayOptions(data.slice(13, 27))
+            document.getElementById("select-3").innerHTML += displayOptions(data.slice(27, 39))
 
 
             form.addEventListener('submit', (event) => {
