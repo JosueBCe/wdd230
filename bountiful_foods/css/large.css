@@ -4,7 +4,7 @@
     }
 
     main {
-      
+
         grid-template-columns: 1fr 1fr;
         grid-gap: 0;
         max-width: 1200px;
@@ -60,16 +60,18 @@
 
     section:nth-child(2) {
         grid-row: 3/4;
-        
+
     }
+
     section:nth-child(3) img {
         width: 100%;
         height: 550px;
-        }
+    }
+
     section:nth-child(3) {
         display: grid;
         grid-row: 4/5;
-        
+
         font-size: 1em;
         padding: 0rem;
         border-radius: .5rem;
@@ -89,7 +91,7 @@
     #spotlights {
         display: grid;
         grid-row: 2/4;
-        grid-template-columns: repeat(4,1fr);
+        grid-template-columns: repeat(4, 1fr);
     }
 
     .spotlight {
@@ -104,9 +106,12 @@
         display: block;
 
     }
-    .slider, .slide {
+
+    .slider,
+    .slide {
         height: 670px;
     }
+
     .slide img {
         object-fit: none;
     }
@@ -117,20 +122,22 @@
         grid-column: 1/2;
     }
 
-    .orders-card {        
-    grid-row: 5/5;
-    
+    .orders-card {
+        grid-row: 5/5;
+
     }
+
     .orders {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    width: fit-content;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        width: fit-content;
     }
+
     .orders h2 {
         grid-column: span 2;
-      }
+    }
 
-    section,.weather-section
-    #spotlights {
+    section,
+    .weather-section #spotlights {
         min-height: 225px;
     }
 
@@ -141,8 +148,8 @@
 
     .company-info-paragraph {
         left: 15%;
-         width: 170px;
-         height: fit-content;
+        width: 170px;
+        height: fit-content;
     }
 
     footer {
@@ -155,7 +162,7 @@
     }
 
 
-  
+
     /* ======================== JOIN PAGE ======================== */
     .join-page {
         display: grid;
@@ -174,7 +181,7 @@
     }
 
 
- 
+
     /* ===================== CONTACT PAGE ====================== */
     .map {
         grid-column: 1/3;

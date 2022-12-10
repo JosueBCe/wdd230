@@ -44,7 +44,7 @@ function myFunction() {
 let images_1 = document.querySelectorAll("img[data-src]");
 let images_2 = document.querySelectorAll("source[srcset]");
 
-images_2.forEach( e=> e.setAttribute('loading', 'lazy'))
+images_2.forEach(e => e.setAttribute('loading', 'lazy'))
 
 const lazyLoading = (imagesToLoad) => {
     const imgOptions = {

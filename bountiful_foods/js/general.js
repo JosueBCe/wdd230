@@ -60,7 +60,7 @@ async function mainFresh() {
                 let idOrder = Math.floor(Math.random() * 4000) + 1
 
                 // Today's date
-                let todaysDate = new Date().toLocaleDateString('en-us', { hour: "numeric", minute:"2-digit"});
+                let todaysDate = new Date().toLocaleDateString('en-us', { hour: "numeric", minute: "2-digit" });
 
                 // Gets the fruits asked 
                 let askedFruits = values.slice(5, 8)
@@ -74,11 +74,11 @@ async function mainFresh() {
 
                 // Show the orders section 
                 ordersDiv.style.display = "grid"
-    
+
 
                 // Shows the order with the user information and nutrients 
                 ordersDiv.innerHTML += displayOrder(values, idOrder) + nutrientsSection(nutritions) + `<p> Order Date: ${todaysDate} </p>`
-            
+
             });
 
         } else {
@@ -103,9 +103,9 @@ const displayOrder = (formValues, idOrder) => {
     `
     necessaryValues = [1, 2, 3, 5, 6, 7]
     html = formValues.map((value, index) => necessaryValues.includes(index)
-            ?               `<li>${value}</li>`
-            : index == 4 ? `<li class="subtitle"><strong>Mix's Ingridients</strong></li> `
-    : index == 8 && value.trim().length > 0 ? `<li class="subtitle"><strong>Special Instructions:</strong><br> <br> ${value}</li>`
+        ? `<li>${value}</li>`
+        : index == 4 ? `<li class="subtitle"><strong>Mix's Ingridients</strong></li> `
+            : index == 8 && value.trim().length > 0 ? `<li class="subtitle"><strong>Special Instructions:</strong><br> <br> ${value}</li>`
                 : ""
     ).join("")
 
@@ -113,10 +113,10 @@ const displayOrder = (formValues, idOrder) => {
 }
 
 // Make appear the Orders Section only if there's a child (at least 1 order), otherwise just make disapear the Orders Section
-const updateLayout = (numOfChild) => 
+const updateLayout = (numOfChild) =>
 
-numOfChild == 1 ? document.querySelector(".orders").style.display = "none" :
-numOfChild >= 2 ? document.querySelector(".orders").style.display = "grid" : ""
+    numOfChild == 1 ? document.querySelector(".orders").style.display = "none" :
+        numOfChild >= 2 ? document.querySelector(".orders").style.display = "grid" : ""
 
 
 // Return a HTML Formatted Section of ther calculated nutritions Total amount.
