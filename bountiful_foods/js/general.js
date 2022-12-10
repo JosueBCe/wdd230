@@ -155,34 +155,3 @@ const cancelOrder = (orderNum) => {
     updateLayout(numOfChild)
 }
 
-// Applies lazy loading to images 
-let imagesToLoad = document.querySelectorAll("img[data-src]");
-
-const imgOptions = {
-    threshold: 0,
-    rootMargin: "0px 0px 400px 0px"
-}
-
-const loadingImages = (img) => {
-    img.setAttribute("src", img.getAttribute("data-src"));
-    img.onload = () => { img.removeAttribute("data-src"); }
-}
-
-if ("IntersectionObserver" in window) {
-    const observer = new IntersectionObserver((items, observer) => {
-        items.forEach((item) => {
-            if (item.isIntersecting) {
-                loadingImages(item.target);
-                observer.unobserve(item.target);
-            }
-        });
-    }, imgOptions);
-    imagesToLoad.forEach((img) => {
-        observer.observe(img);
-    });
-} else {
-    imagesToLoad.forEach((img) => {
-        loadingImages(img);
-    });
-}
-

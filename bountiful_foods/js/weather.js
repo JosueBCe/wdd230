@@ -106,7 +106,7 @@ storedOrders = document.querySelector(".stored-orders")
 // Displays the orders in the StoredOrders Section in a html format. 
 const ordersCard = () => {
     for (let [key, value] of Object.entries(localStorage)) {
-        console.log(value)
+
         if (key.split(" ")[0] == "Order") {
             fruits = value.replace(/[\[\]'"]/g, '').split(",")
             orderHtml = fruits.map((fruit, index) =>
