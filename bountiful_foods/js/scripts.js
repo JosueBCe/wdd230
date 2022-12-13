@@ -19,7 +19,7 @@ let banner = document.querySelector("#banner")
 
 // Date and Time form was loaded 
 
-
+document.cookie = "witcher=Geralt; SameSite=None; Secure"
 
 banner.innerHTML = d.toLocaleDateString('en-uk', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
 
